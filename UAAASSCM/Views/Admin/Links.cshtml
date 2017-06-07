@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Links";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2>Links</h2>
+
+
+
+<ul>
+    <li>
+        @Html.ActionLink("User Creation", "UserRegistration", "Admin")
+    </li>
+    <li>
+        @Html.ActionLink("Admin SCM Uploaded Details", "CollegewiseDetails", "Admin")
+    </li>
+
+    <li>
+        @Html.ActionLink("Nominee Data Entry", "Index", "User")
+    </li>
+
+    <li>
+        @Html.ActionLink("Dept Wise Approved Faculty", "DeptWiseApprovedFaculty", "User")
+    </li>
+
+
+    <li>
+        @Html.ActionLink("SCM Proceeding Request", "CollegeScmProceedingsRequest", "CollegeSCMProceedingsRequestForAdmin")
+    </li>
+
+    <li>
+        @Html.ActionLink("SCM Faculty Verification", "ScmFacultyVerfication", "CollegeSCMProceedingsRequest")
+    </li>
+
+    <li>
+        @Html.ActionLink("SCM Proceeding Requested Colleges", "SCMRequestsList", "CollegeSCMProceedingsRequest")
+    </li>
+
+    <li>
+        @Html.ActionLink("SCM Uploaded View", "SCMUploadView", "CollegeSCMProceedingsRequest")
+    </li>
+    
+</ul>

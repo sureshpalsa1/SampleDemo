@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "showSCMmenuforUser";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+@*<h2> show SCM menu for User</h2>*@
+@*<div id="div1" class="section_pink" style="text-align: center; width: 400px; margin: auto">
+    <ul type="none">
+        <li>@Html.ActionLink("Data Entry and SCM Upload by Nominee for faculty", "Index", "User", new {}, new {@target = "_blank"})</li>
+        @*<li>@Html.ActionLink("College Wise SCM Approved Faculty List", "DeptWiseApprovedFaculty", "User")</li>*
+        @*<li>@Html.ActionLink("College Wise SCM Uploaded View", "SCMUploadView", "CollegeSCMProceedingsRequest")</li>*
+        <li>@Html.ActionLink("Data Entry and SCM Upload by Nominee for principal", "PrincipalNomineeDataEntry", "User", new {}, new {@target = "_blank"})</li>
+        <li>@Html.ActionLink("Latest Approved Faculty By Nominee", "ApprovedFacultyBasedOnNominee", "Admin", new {}, new {@target = "_blank"})</li>
+        <li>@Html.ActionLink("Change Password", "ChangePassword", "Admin", new {}, new {@target = "_blank"})</li>
+    </ul>
+</div>*@
+
+<div style="margin-bottom:170px">
+    <table border="1" style="width: 100%">
+        <tr>
+            <td style="width: 33%; background-color: #E6EAEE; padding: 5px; vertical-align: top" class="rounded_corners_box">
+                <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Data Entry and SCM Upload by Nominee for faculty", "Index", "User", new {}, new {@target = "_blank"})</span> &nbsp;
+                <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Data Entry and SCM Upload by Nominee for principal", "PrincipalNomineeDataEntry", "User", new {}, new {@target = "_blank"})</span> &nbsp;
+
+                <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Latest Approved Faculty By Nominee", "ApprovedFacultyBasedOnNominee", "Admin", new {}, new {@target = "_blank"})</span> &nbsp;
+                <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Change Password", "ChangePassword", "Admin", new {}, new {@target = "_blank"})</span> &nbsp;
+
+
+            </td>
+
+            <td style="width: 33%; background-color: #E6EAEE; padding: 5px;" class="rounded_corners_box">
+                <b class="news_header_lower_1">Instructions</b>
+                <ul class="newstitle">
+                    <li> Strictly follow the procedure detailed in the mail sent to them.</li>
+                </ul>
+                <ul class="newstitle">
+                    <li> All the SCM nominees are requested to change their password immediately after logging for the first time to avoid any misuse of their login credentials by others.</li>
+                </ul>
+                <ul class="newstitle">
+                    <li> Prepare the Selection committee minutes only in the format mailed to them.</li>
+                </ul>
+                <ul class="newstitle">
+                    <li> To conduct the selection process only for the candidates whose list was sent to them as mail attachment.</li>
+                </ul>
+                <ul class="newstitle">
+                    <li>To upload the SCM minutes through the URL and login, password sent to their mail id. Please don’t mail the SCM minutes to DUAAC.</li>
+                </ul>
+                <ul class="newstitle">
+                    <li> The sitting fee and conveyance charges can be met by the respective colleges.</li>
+                </ul>
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="alerttext" style="background-color:cornflowerblue; border: 1px solid #f49820;">
+                    <p>University Nominees are Requested <b style="color: red">not to select</b> Candidates whose names are shown as <b style="color: red">BLACK LISTED</b> in their login credentials.</p>
+              </div>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+
+
+
+
+
+@*<li>@Html.ActionLink("SCM Approved Principal", "PrincipalSelectedView", "User")</li>*@
+<style>
+    #div1 ul li {
+        padding: 10px;
+        font-size: 15px;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        window.setInterval(changeerror, 2000);
+    });
+    var c = 1;
+
+    function changeerror() {
+
+        switch (c) {
+            case 0:
+                $(".alerttext p").css("color", "yellow");
+                //$(".error p").attr({"color": "red","text-align"});
+                c = 1;
+                break;
+            case 1:
+                $(".alerttext p").css("color", "black");
+                c = 2;
+                break;
+            case 2:
+                $(".alerttext p").css("color", "blue");
+                c = 0;
+                break;
+        }
+    }
+</script>

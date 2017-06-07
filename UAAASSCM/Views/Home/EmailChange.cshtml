@@ -1,0 +1,49 @@
+﻿
+
+@{
+    ViewBag.Title = "EmailChange";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Email Change</h2>
+@if (TempData["Error"] != null)
+{
+    <div class="error">
+        <p><strong>Error:</strong> @TempData["Error"].ToString()</p>
+    </div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="success">
+        <p><strong>Success:</strong> @TempData["Success"].ToString()</p>
+    </div>
+}
+
+<form method="post" enctype="multipart/form-data" action="@Url.Action("EmailChange", "Home")">
+
+
+    <table class="faculty_table">
+        <tr>
+            <td class="col1" colspan="2">
+                Current Email
+            </td>
+            <td class="col2" colspan="2">
+                @Html.TextBox("OldEmail", "", new { @required = "required", @placeholder = "Current Email" })
+            </td>
+
+        </tr>
+        <tr>
+            <td class="col1" colspan="2">
+                New Email
+            </td>
+            <td class="col2" colspan="2">
+                @Html.TextBox("NewEmail", "", new { @required = "required", @placeholder = "New Email" })
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center"><input type="submit" id="Submit" value="Submit" /></td>
+
+        </tr>
+    </table>
+
+</form>

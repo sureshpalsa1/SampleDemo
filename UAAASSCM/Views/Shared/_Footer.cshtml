@@ -1,0 +1,27 @@
+﻿
+<div class="footer">
+    @*<a href="~/Views/BAC.html" style="color:black" target="_blank"></a>
+        <a href="#" style="color:black" target="_blank">Disclaimer</a>   |
+        <a href="#" style="color:black" target="_blank">Privacy Policy</a>*@
+    <br />
+    @*<div class="menu_items" >*@
+    @*</div>*@
+    Copyright &copy; 2016 JNTUH Academic Audit Cell. All rights reserved.
+    @*<br />*@<span style="color: #024b74">
+        @*<span>IP Address: @HttpContext.Current.Request.UserHostAddress</span> - [<span>@Membership.GetNumberOfUsersOnline() - @UAAAS.Helpers.ActiveSessions.Count</span>]*@
+    </span>
+   
+        <ul >
+            <li style="display: inline; list-style-type: none; padding-right: 10px;">@Html.ActionLink(" Terms & Conditions |", "TermsandConditions", "Payment", null, new { style = "color:orange" })</li>
+            <li style="display: inline; list-style-type: none; padding-right: 10px; ">@Html.ActionLink("Disclaimer |", "Disclaimer", "Payment", null, new { style = "color:orange" })</li>
+            <li style="display: inline; list-style-type: none; padding-right: 10px; ">@Html.ActionLink("Privacy Policy |", "PrivacyPolicy", "Payment", null, new { style = "color:orange" })</li>
+            <li style="display: inline; list-style-type: none; padding-right: 10px; ">@Html.ActionLink("Refund and Cancellation Policy", "RefundandCancellationPolicy", "Payment", null, new { style = "color:orange" })</li>
+            @*<li style="display:none;"><iframe src='http://www.hindutourism.com/1-12-1/tirumala-tirupati-devasthanams-ttd' width='100%' height='100%'></iframe></li>*@
+        </ul>
+    
+</div>
+      
+
+
+
+

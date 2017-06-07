@@ -1,0 +1,306 @@
+﻿@model List<UAAASSCM.Controllers.AllScmRequests>
+@{
+    ViewBag.Title = "Get All SCM details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    int count = 1;
+}
+
+<h2>Get All SCM deatails</h2>
+
+<script type="text/javascript">
+    var asInitVals = new Array();
+    $(document).ready(function () {
+
+        /* Initialize table and make first column non-sortable*/
+        var oTable = $('#example').dataTable({
+            "bJQueryUI": true,
+            "iDisplayLength": 50,
+            "bStateSave": false,
+            "sDom": '<"top"lfip>rt<"bottom"ip<"clear">',
+            //"sPaginationType": "full_numbers",
+            "oLanguage": {
+                "sSearch": "Search all columns:",
+                "oPaginate": {
+                    "sFirst": "",
+                    "sLast": "",
+                    "sNext": "",
+                    "sPrevious": ""
+                }
+            },
+            "fnInitComplete": function () {
+                var oSettings = $('#example').dataTable().fnSettings();
+                for (var i = 0 ; i < oSettings.aoPreSearchCols.length ; i++) {
+                    if (oSettings.aoPreSearchCols[i].sSearch.length > 0) {
+                        $("tfoot input")[i].value = oSettings.aoPreSearchCols[i].sSearch;
+                        $("tfoot input")[i].className = "";
+                    }
+                }
+            },
+            "aoColumns": [{ "bSortable": true, "bSearchable": true }, null, null, null, null,null],
+            //"aoColumns": [{ type: "select", values: ['Gecko', 'Trident', 'KHTML', 'Misc', 'Presto', 'Webkit', 'Tasman'] },{ type: "text" },null,{ type: "number" },{ type: "select" }]
+        });
+        /*
+         * Support functions to provide a little bit of 'user friendlyness' to the textboxes in
+         * the footer
+         */
+        $("tfoot input").each(function (i) {
+            asInitVals[i] = this.value;
+        });
+        $("tfoot input").focus(function () {
+            if (this.className == "search_init") {
+                this.className = "";
+                this.value = "";
+            }
+        });
+        $("tfoot input").blur(function (i) {
+            if (this.value == "") {
+                this.className = "search_init";
+                this.value = asInitVals[$("tfoot input").index(this)];
+            }
+        });
+        $("tfoot input").keyup(function () {
+            /* Filter on the column (the index) of this element */
+            oTable.fnFilter(this.value, $("tfoot input").index(this));
+        });
+    });
+
+
+    $(document).ready(function () {
+
+        var mainUrl = window.location;
+        var url;
+
+        $.ajaxSetup({ cache: false });
+
+        var $myDialog = $("#dialog-edit").dialog({
+
+            title: 'Verify Lab',
+            autoOpen: false,
+            resizable: false,
+            height: 520,
+            width: 640,
+            show: { effect: 'drop', direction: "up" },
+            modal: true,
+            draggable: true,
+            closeOnEscape: true,
+            open: function (event, ui) {
+                $(this).load(url);
+            },
+            close: function (event, ui) {
+                $(this).dialog("close");
+            }
+        });
+
+
+
+        $('.display').find('tr').click(function () {
+            url = $(this).find(".editDialog").attr('href');
+        });
+
+
+
+        $("#btncancel").live("click", function (e) {
+            $("#dialog-edit").dialog("close");
+        });
+
+        $($myDialog).bind("dialogclose", function () {
+            // window.location = mainUrl;
+            //  DataTable();
+        });
+
+        // Delete Confirmation
+
+        $(".confirmDialog").live("click", function (e) {
+
+            var Pid = $(this).attr("pid");
+            // var mid = $(this).attr("mid");
+            var url = '/Labs/DeletefromPhysical?pid=' + Pid;
+
+            $("#dialog-confirm").dialog({
+                title: 'Delete Lab',
+                autoOpen: false,
+                resizable: false,
+                height: 170,
+                width: 350,
+                show: { effect: 'drop', direction: "up" },
+                modal: true,
+                draggable: true,
+                buttons: {
+                    "Yes": function () {
+                        $(this).dialog("close");
+                        window.location = url;
+
+                    },
+                    "No": function () {
+                        $(this).dialog("close");
+
+                    }
+                }
+            });
+
+            $("#dialog-confirm").dialog('open');
+            return false;
+        });
+
+
+
+
+
+
+
+        $("#btncancel").live("click", function (e) {
+            $("#dialog-edit").dialog("close");
+        });
+
+        $($myDialog).bind("dialogclose", function () {
+            //  window.location = mainUrl;
+        });
+
+    });
+
+
+    $(".openDialog").live("click", function (e) {
+        debugger;
+        //var LabmasterId = $(this).attr("IDs");
+        //var url = "/Admin/getSCMrecordsbyID?Ids=" + LabmasterId;
+         url = $(this).attr("href");
+        $("#dialog-add").dialog({
+            title: 'View SCM Details',
+            autoOpen: false,
+            resizable: false,
+            height: 320,
+            width: 640,
+            show: { effect: 'drop', direction: "up" },
+            modal: true,
+            draggable: true,
+            closeOnEscape: true,
+            open: function (event, ui) {
+                $(this).load(url);
+            },
+            close: function (event, ui) {
+                $(this).dialog("close");
+            }
+
+        });
+
+        $("#dialog-add").dialog('open');
+        return false;
+    });
+
+
+
+    
+
+
+
+    $("#btncancel").live("click", function (e) {
+        $("#dialog-edit").dialog("close");
+    });
+
+    $("#btnaddcancel").live("click", function (e) {
+        $("#dialog-add").dialog("close");
+    });
+
+
+</script>
+
+<table id="example" class="display">
+    <thead>
+        <tr>
+            <th style="width: 80px; text-align: center;">
+                S.No
+            </th>
+            @*<th style="width: 50px; text-align: center;">
+               Auditor Id
+            </th>*@
+            <th style="width: 220px; text-align: center;">
+                Auditor Name
+            </th>
+            <th style="width: 120px; text-align: center;">
+                Department
+            </th>
+            <th style="width: 120px; text-align: center;">
+                Place
+            </th>
+            <th style="width: 200px; text-align: center;">
+                Count 
+            </th>
+            <th style="width: 120px; text-align: center;">
+               View
+            </th>
+           
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td style="width: 50px; text-align: center;">
+                        @(count++)
+                    </td>
+                    @*<td style="width: 50px; text-align: left; text-transform: uppercase;">
+                        @item.auditorId
+                    </td>*@
+                    <td style="width: 220px; text-align: left; text-transform: uppercase;">
+                        @item.AuditorName
+                    </td>
+                    <td style="width: 120px; text-align: center;">
+                        @item.deptName
+                    </td>
+                    <td style="width: 120px; text-align: center;">
+                        @item.PrefereedLocation
+                    </td>
+                    <td style="width: 200px; text-align: center;">
+                        @item.CountofSCM
+                    </td>
+                    <td style="width: 120px; text-align: center;">
+
+                        @*@Html.ActionLink("View", "getSCMrecordsbyID","Admin", new { @IDs = @item.StrScmIds,auditorId=@item.auditorId }, new { @class = "view_button",target="_blank" })*@
+                        @Html.ActionLink("View", "getSCMrecordsbyID","Admin", new { @auditorId=@item.auditorId }, new { @class = "view_button",target="_blank" })
+                        
+                    </td>
+                   
+
+
+                </tr>
+            }
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th style="width: 50px;">
+                <input type="text" id="i-0" style="width: 90%; text-align: left;" class="search_init">
+            </th>
+            <th style="width: 50px;">
+                <input type="text" id="i-1" style="width: 60%; text-align: left;" class="search_init">
+            </th>
+            <th>
+                <input type="text" id="i-2" style="width: 90%; text-align: left;" class="search_init">
+            </th>
+            <th style="width: 50px;">
+                <input type="text" id="i-5" style="width: 90%; text-align: left;" class="search_init">
+            </th>
+            <th style="width: 50px;">
+                <input type="text" id="i-3" style="width: 90%; text-align: left;" class="search_init">
+            </th>
+            <th style="width: 50px;">
+                <input type="text" id="i-4" style="width: 60%; text-align: left; " class="search_init">
+            </th>
+            @*<th>
+                <input type="text" id="i-5" style="width: 90%; text-align: left;" class="search_init">
+            </th>*@
+            @*<th style="width: 50px;">
+                <input type="text" id="i-6" style="width: 90%; text-align: left; display: none;" class="search_init">
+            </th>
+            <th style="width: 50px;">
+                <input type="text" id="i-7" style="width: 90%; text-align: left; display: none;" class="search_init">
+            </th>*@
+        </tr>
+    </tfoot>
+</table>
+
+<div id="dialog-add" style="display:none"></div>

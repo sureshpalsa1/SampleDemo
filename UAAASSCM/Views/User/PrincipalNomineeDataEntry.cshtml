@@ -1,0 +1,285 @@
+﻿@model List<UAAASSCM.Controllers.ScmUploadedData>
+@{
+    ViewBag.Title = "PrincipalNomineeDataEntry";
+    if (@User.Identity.Name == "admin")
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    }
+
+    int count = 1;
+
+    int Index = 1;
+}
+
+<h2>Principal SCM Nominee DataEntry</h2>
+
+
+@if (TempData["Error"] != null)
+{
+    <div class="error">
+        <p><strong>Error:</strong> @TempData["Error"].ToString()</p>
+    </div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="success">
+        <p><strong>Success:</strong> @TempData["Success"].ToString()</p>
+    </div>
+}
+<div>
+
+    @using (Html.BeginForm("PrincipalNomineeDataEntry", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <table width="100%">
+            @if (ViewBag.Colleges != null)
+            {
+                <tr>
+                    <td class="col1" width="15%" style="font-weight: bold"><span>Colleges</span></td>
+                    <td class="col2" width="85%">
+                        @Html.DropDownList("collegeId", new SelectList(ViewBag.Colleges as System.Collections.IEnumerable, "collegeId", "collegeName"), "---Select--", new { @id = "collegeId", style = "max-width: none;width:700px" })
+                    </td>
+                </tr>
+            }
+
+
+        </table>
+        <br />
+        <table width="100%" id="tbl1" style="border-collapse: collapse; border: 1px solid #C0C0C0">
+            <tr style="background-color: #C1D4E6">
+                <th>S.No.</th>
+              
+                <th>Registration Number</th>
+                <th>Name</th>
+                <th>Select</th>
+            </tr>
+            @if (Model != null && Model.Count() != 0)
+            {
+
+                for (int i = 0; i < Model.Count(); i++)
+                {
+            <tr style="background-color: #FCF1D1">
+                <td>
+                    @(i + 1)
+                    @Html.HiddenFor(model => model[i].SCMId)
+                    @Html.HiddenFor(model => model[i].SpecializationId)
+                    @Html.HiddenFor(model => model[i].DegreeId)
+                    @Html.HiddenFor(model => model[i].DepartmentId)
+                    @Html.HiddenFor(model => model[i].RegistrationNumber)
+                    @Html.HiddenFor(model => model[i].CollegeId)
+                </td>
+                @*<td>@Html.DisplayFor(model => model[i].Specialization)</td>*@
+                <td>@Html.DisplayFor(model => model[i].RegistrationNumber)</td>
+                <td>@Html.DisplayFor(model => model[i].FirstName)</td>
+                <td>@Html.CheckBoxFor(model => model[i].Checked)</td>
+            </tr>
+                }
+            }
+
+        </table>
+
+        if (@ViewBag.SCMData != null && @ViewBag.SCMData !=0)
+        {
+            <br />
+            <table width="100%" id="tbl2" style="">
+                <tr>
+                    <td style="background-color: #E8EFF3; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;" width="30%">
+                        <span><b>Upload Hard copy of SCM duly Signed by SCM Members</b></span>
+                    </td>
+                    <td style="background-color: #FCF1D1; padding-left: 5px">
+                        <div class="SCMHardcopys">
+                            @Html.TextBox("SCMHardcopy", "", new {type = "file", @required = true, @class = "SCMHardcopy required", @title = "Please Upload SCM Document"})
+                            <span style="color: red;"></span>
+                        </div>
+                </td></tr>
+<tr>
+    <td style="background-color: #E8EFF3; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;vertical-align: top" width="30%">
+        <span><b>Remarks</b></span>
+    </td>
+    <td style="background-color: #FCF1D1; padding: 10px">
+        @Html.TextArea("Remarks", "", new { style = "resize: none;width: 99%", @maxlength = "1995" })
+    </td>
+</tr>
+            </table>
+
+            <br />
+            <div>
+                <p style="text-align: right">
+                    <input type="Submit" value="Submit" id="btnSubmit" style="background-color: #024b74; color: white" />
+                </p>
+            </div>
+        }
+
+
+    }
+</div>
+<br/>
+<br/>
+<div>
+    <table width="100%" id="tbl1" style="border-collapse: collapse; border: 1px solid #C0C0C0">
+        <tr style="background-color: #C1D4E6">
+            <th>S.No.</th>
+            <th>Registration Number</th>
+            <th>Faculty Name</th>
+            <th>Nominee Name</th>
+            <th>Nominee SCM Upload</th>
+            <th>Select</th>
+        </tr>
+        @if (ViewBag.NomineeApprovedFaculty != null)
+{
+
+    foreach (var item in ViewBag.NomineeApprovedFaculty)
+    {
+        <tr style="background-color: #FCF1D1; padding-left: 5px">
+            <td>
+                @(Index++)
+            </td>
+            <td>
+                @item.RegistrationNumber
+            </td>
+            <td>
+                @item.FirstName
+            </td>
+            <td>
+                @item.AuditorName
+                    </td>
+
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.SCMhardcopyview))
+                        {
+                            <b><a href="../Content/Upload/SCMPROCEEDINGSREQUEST/UploadSCMHardCopy/@item.SCMhardcopyview" target="_blank">View</a></b>
+                        }
+                    </td>
+                    <td>
+                        @if (item.Checked == true)
+                        {
+                            <span>Selected</span>
+                        }
+                        else
+                        {
+                      <span>Not Selected</span>
+                        }
+                    </td>
+                </tr>
+    }
+}
+    </table>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //get pdf file size
+        function GetNotificationFileSize(fileid) {
+            debugger;
+            try {
+                var fileSize = 0;
+                //for IE
+                //if ($.browser.msie) {
+                //    //before making an object of ActiveXObject, //please make sure ActiveX is enabled in your IE browser
+                //    var objFSO = new ActiveXObject("Scripting.FileSystemObject");
+                //    var filePath = $("#" + fileid)[0].value;
+                //    var objFile = objFSO.getFile(filePath);
+                //    var fileSize = objFile.size; //size in kb
+                //    //alert(fileSize);
+                //    //fileSize = fileSize / 1048576; //size in mb
+                //    // fileSize = fileSize / 1048576; //size in mb
+                //    alert(fileSize);
+                //}
+                //    //for FF, Safari, Opeara and Others
+                //else {
+                fileSize = $("#SCMHardcopy")[0].files[0].size; //size in kb
+                //fileSize = fileSize / 1048576; //size in mb
+                // }
+                return fileSize;
+            } catch (e) {
+
+                // alert("Error is : " + e);
+            }
+        }
+
+
+        //get file path from client system
+        function getNameFromPath(strFilepath) {
+            var objRE = new RegExp(/([^\/\\]+)$/);
+            var strName = objRE.exec(strFilepath);
+
+            if (strName == null) {
+                return null;
+            } else {
+                return strName[0];
+            }
+        }
+
+
+        //change function for pdf doc
+        $(".SCMHardcopy").change(function () {
+            debugger;
+            var file = getNameFromPath($(this).val());
+            var flag;
+            if (file != null) {
+                debugger;
+                var extension = file.substr((file.lastIndexOf('.') + 1));
+                var size = GetNotificationFileSize(file);
+                // size = size / 1048576;
+                size = size / 5242880;
+                if (size > 1) {
+                    $(".SCMHardcopys > span").text("Document should not exceed 5 MB in Size");
+                    $(this).val('');
+                } else {
+
+                    $(".SCMHardcopys > span").text("");
+                }
+                //    switch (extension) {
+                //        case 'pdf':
+                //        case 'PDF':
+
+                //            flag = true;
+                //            break;
+                //        default:
+                //            flag = false;
+                //    }
+
+                //}
+
+                //if (flag == false) {
+                //    $(".SCMHardcopys > span").text("You can upload only  Pdf files");
+                //    $(this).val('');
+                //    return false;
+                //} else {
+                //    var size = GetNotificationFileSize(file);
+                //    // size = size / 1048576;
+                //    size = size / 5242880;
+                //    if (size > 1) {
+                //        $(".SCMHardcopys > span").text("Document should not exceed 5 MB in Size");
+                //        $(this).val('');
+                //    } else {
+
+                //        $(".SCMHardcopys > span").text("");
+                //    }
+            }
+
+        });
+
+
+    });
+
+    $("#collegeId").change(function () {
+        var collegeId = $(this).val();
+        if (collegeId !== "") {
+            window.location = '/User/PrincipalNomineeDataEntry?collegeId=' + collegeId;
+        } else {
+            window.location = '/User/PrincipalNomineeDataEntry';
+        }
+    });
+</script>
+<style>
+    #tbl1 tr th, #tbl1 tr td {
+        border: 1px solid #C0C0C0;
+        padding: 5px;
+    }
+</style>

@@ -1,0 +1,154 @@
+﻿@model List<UAAAS.Controllers.College.Nomineereassign>
+@{
+    ViewBag.Title = "NomineeReassignView";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    int Count = 1;
+}
+
+<h2>Nominee Reassign to SCM Requests</h2>
+
+
+@if (TempData["Error"] != null)
+{
+    <div class="error">
+        <p><strong>Error:</strong> @TempData["Error"].ToString()</p>
+    </div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="success">
+        <p><strong>Success:</strong> @TempData["Success"].ToString()</p>
+    </div>
+}
+
+
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th class="col1">College </th>
+            <td class="col2">
+                @Html.DropDownList("collegeId", new SelectList(ViewBag.Colleges as System.Collections.IEnumerable, "CollegeId", "CollegeName"), "---Select---", new { @id = "collegeId", @style = "width:700px" })
+            </td>
+        </tr>
+    </table>
+
+
+    if (@Model.Count != 0)
+    {
+        <table class="webGrid" style="width:100%">
+            <tr class="gridHeader">
+                <th>S.No</th>
+                <th>Degree</th>
+                <th>Department</th>
+                <th>Specialization</th>
+                <th>Nominee Name</th>
+                <th>Assigned Date</th>
+                <th>Re-Assigned Date</th>
+                <th style="width: 80px;">Re-Assign Nominee</th>
+                @*  <th>S.No</th>
+                    <th>S.No</th>
+                    <th>S.No</th>*@
+            </tr>
+            @for (int i = 0; i < Model.Count(); i++)
+            {
+                <tr style="background-color: #FCF1D1">
+                    <td>@(Count++)</td>
+                    <td>
+                        @Html.DisplayFor(model => model[i].Degree)
+                        @Html.HiddenFor(model => model[i].SCMId)
+                        @Html.HiddenFor(model => model[i].NomineeId)
+                        @Html.HiddenFor(model => model[i].Aid)
+                        @Html.HiddenFor(model => model[i].AuditorIds)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model[i].DepartmentName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model[i].SpecializationName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model[i].NomineeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model[i].viewAuditorAssignedDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model[i].viewReassignedDate)
+                    </td>
+                    <td>
+                        <a href="" class="create_button Editdailog" scmid="@Model[i].SCMId" auditorid="@Model[i].Aid" assigndate="@Model[i].viewAuditorAssignedDate" collegeid="@Model[i].CollegeId">Edit</a>
+                        @*<input type="button" class="create_button" value="Edit"/>*@
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+
+}
+<div id="dialog-edit" style="display: none">
+
+</div>
+
+<script type="text/javascript">
+    var selectedSCMIds = [];
+    $(document).ready(function() {
+        var mainUrl = window.location;
+        var url;
+        $.ajaxSetup({ cache: false });
+        var $myDialog = $("#dialog-edit").dialog({
+            title: 'Select Nominees',
+            autoOpen: false,
+            resizable: false,
+            height: 550,
+            width: 640,
+            show: { effect: 'drop', direction: "up" },
+            modal: true,
+            draggable: true,
+            closeOnEscape: true,
+            open: function(event, ui) {
+                $(this).load(url);
+            },
+            close: function(event, ui) {
+                $(this).dialog("close");
+            }
+        });
+        $(".Editdailog").live("click", function(e) {
+            debugger;
+
+            var ScmId = $(this).attr('scmid');
+            var CollegeId = $(this).attr('collegeid');
+            var AuditorId = $(this).attr('auditorid');
+            var AssignedDate = $(this).attr('assigndate');
+            url = "/CollegeSCMProceedingsRequest/AuditorReAssign?collegeId=" + CollegeId + "&SCMId=" + ScmId + "&AssignedDate=" + AssignedDate + "&AuditorId=" + AuditorId;
+
+            $("#dialog-edit").dialog({
+                title: 'Select Nominees'
+            });
+
+            $myDialog.dialog('open');
+            return false;
+        });
+
+
+    });
+
+    $("#collegeId").change(function() {
+        var collegeId = $(this).val();
+        if (collegeId !== "") {
+            window.location = '/CollegeSCMProceedingsRequest/NomineeReassignView?collegeId=' + collegeId;
+        } else {
+            window.location = '/CollegeSCMProceedingsRequest/NomineeReassignView';
+        }
+    });
+
+
+</script>
+
+<style>
+    .webGrid a:link, .webGrid a:visited {
+        color: white;
+        text-decoration: none;
+    }
+</style>

@@ -1,0 +1,53 @@
+﻿@using System.Globalization
+@model IList<UAAAS.Controllers.College.NomineeAssignSCMRequests>
+@{
+    ViewBag.Title = "CollegeScmProceedingsRequestNomineeAssignedview";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    string SCMRequestDate = string.Empty;
+    string AuditorAssignDate = string.Empty;
+    int Index = 1;
+}
+
+<h2>Nominee Assign SCM Requests</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+       
+        <table class="webGrid">
+            <thead>
+                <tr class="gridHeader">
+                    <th style="text-align: center;">S.No.</th>
+                    <th style="width:300px">College</th>
+                    <th style="width:270px">Specialization</th>
+                    <th>SCM Request Date</th>
+                    <th>Nominee Name</th>
+                    <th>Nominee Assign Date</th>
+                </tr>
+            </thead>
+            <tbody style="background: #FCF1D1">
+                @foreach (var item in Model)
+                {
+                    if (@item.ScmRequestDate != null)
+                    {
+                        SCMRequestDate = UAAAS.Models.Utilities.MMDDYY2DDMMYY(item.ScmRequestDate.ToString());
+                    }
+                    else
+                    {
+                        SCMRequestDate = "";
+                    }
+                   
+                    AuditorAssignDate = UAAAS.Models.Utilities.MMDDYY2DDMMYY(item.AuditorAssignDate.ToString(CultureInfo.InvariantCulture));
+                    <tr>
+                        <td style="text-align: center;">@(Index++)</td>
+                        <td>@item.CollegeName</td>
+                        <td>@item.Department</td>
+                        <td>@SCMRequestDate</td>
+                        <td>@item.AuditorName</td>
+                        <td>@AuditorAssignDate</td>
+                      </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

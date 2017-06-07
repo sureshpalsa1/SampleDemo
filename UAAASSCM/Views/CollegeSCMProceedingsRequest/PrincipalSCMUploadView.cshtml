@@ -1,0 +1,105 @@
+﻿@using UAAAS.Controllers.College
+
+@{
+    ViewBag.Title = "PrincipalSCMUploadView";
+    if (User.Identity.Name == "admin")
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    }
+    int Count = 1;
+    string SCMDate = string.Empty;
+}
+
+<h2>Principal SCM Uploaded View</h2>
+
+@using (Html.BeginForm())
+{
+    if (TempData["Error"] != null)
+    {
+        <div class="error">
+            <p><strong>Error:</strong> @TempData["Error"].ToString()</p>
+        </div>
+    }
+    if (TempData["Success"] != null)
+    {
+        <div class="success">
+            <p><strong>Success:</strong> @TempData["Success"].ToString()</p>
+        </div>
+    }
+
+    <table class="four_columns" style="border-collapse: separate; border-spacing: 2px;">
+        <tr>
+            <td class="col1">
+                <span>College</span>
+            </td>
+            <td class="col2" colspan="4">
+                @Html.DropDownList("collegeId",
+                    new SelectList(ViewBag.Colleges as System.Collections.IEnumerable, "collegeId", "collegeName"),
+                    "--Select--", new { id = "collegeId" })
+            </td>
+        </tr>
+        
+    </table>
+
+
+    <br />
+    if (ViewBag.SCMData != null)
+    {
+
+        <table width="100%" class="webGrid" style="border-collapse: collapse; border: 1px solid #C0C0C0">
+            <tr style="background-color: #C1D4E6; padding: 10px; font-weight: bold; height: 25px; text-align: center">
+                <th width="10%">S.No</th>
+                <th width="10%">SCM Date</th>
+                <th width="20%">Principal Doc</th>
+               
+            </tr>
+            @foreach (var item2 in (List<Scmuploads>)ViewBag.SCMData)
+            {
+                <tr style="background-color: #FCF1D1;  padding: 10px; height: 25px;  ">
+                    <td width="10%">@(Count++)</td>
+                    <td width="10%">@item2.ScmDate</td>
+                    @if (!string.IsNullOrEmpty(item2.ProfessorDocumentView))
+                    {
+                        <td width="20%">
+                            <b><a href="http://112.133.193.228:75/Content/Upload/SCMUploads/@item2.ProfessorDocumentView" target="_blank">Principal</a></b>
+                        </td>
+                    }
+                    else
+                    {
+                        <td width="20%"></td>
+                    }
+                    
+                </tr>
+            }
+        </table>
+    }
+}
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    });
+
+    $("#collegeId").change(function () {
+        var collegeId = $(this).val();
+        if (collegeId !== "") {
+            window.location = '/CollegeSCMProceedingsRequest/PrincipalSCMUploadView?collegeId=' + collegeId;
+        } else {
+            window.location = '/CollegeSCMProceedingsRequest/PrincipalSCMUploadView';
+        }
+    });
+
+
+    
+</script>

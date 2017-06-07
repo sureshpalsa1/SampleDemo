@@ -1,0 +1,119 @@
+﻿@model List<UAAASSCM.Controllers.ScmUploadedData>
+@using UAAASSCM.Models
+@{
+    var db = new SCMEntities();
+    int count = 1;
+    string Strdate = string.Empty;
+
+    string Designation = string.Empty;
+    string color = string.Empty;
+    var jntuh_designation = db.jntuh_designation.AsNoTracking().ToList();
+}
+
+
+<table width="100%" border="1">
+  
+    <tr style="font-weight: bold;">
+        <th style="text-align: center; background-color: yellow; vertical-align: top;" >S.No.</th>
+        <th style="width: 165px; text-align: center; background-color: yellow; vertical-align: top;" >Branch</th>
+        <th style=" text-align: center; background-color: yellow; vertical-align: top;" >Registration Number</th>
+        <th style=" text-align: center; background-color: yellow; vertical-align: top;" >Faculty Name</th>
+        <th style=" text-align: center; background-color: yellow; vertical-align: top;" >ApplyedFor</th>
+        <th style="width: 180px; text-align: center; background-color: yellow; vertical-align: top;" >Nominee Name</th>
+        <th style=" text-align: center; background-color: yellow; vertical-align: top;" >SCM Date</th>
+        @*<th style=" text-align: center;" rowspan="2">SCM Document</th>*@
+        <th style=" text-align: center; background-color: yellow; vertical-align: top;" >Select</th>
+        @*<th style=" text-align: center;" rowspan="2">View</th>*@
+            <th style=" text-align: center; background-color: yellow; vertical-align: top;">Approve (OR) Not Approve</th>
+            @*<th style="text-align: center; background-color: yellow; vertical-align: top;" >Not Approve</th>*@
+        <th style=" text-align: center; background-color: yellow; vertical-align: top;" >Remarks</th>
+    </tr>
+  
+        @if (Model != null && Model.Count() != 0)
+        {
+
+            for (int i = 0; i < Model.Count(); i++)
+            {
+                if (Model[i].Approved == true)
+                {
+                    color = "green";
+                }
+                else if (Model[i].Approved == false)
+                {
+                    color = "red";
+                }
+                else
+                {
+                    color = "";
+                }
+
+
+                Strdate = UAAAS.Models.Utilities.MMDDYY2DDMMYY(Model[i].SCMDate.ToString());
+                if (Model[i].DesignationId != 0)
+                {
+                    var jntuhDesignation = jntuh_designation.FirstOrDefault(e => e.id == Model[i].DesignationId);
+                    if (jntuhDesignation != null)
+                    {
+                        Designation = jntuhDesignation.designation;
+                    }
+                }
+                <tr>
+                   
+                    <td style="background-color: @color">
+                        @(i + 1)
+                    </td>
+                    <td>@Html.DisplayFor(model => model[i].Specialization)</td>
+                    <td>@Html.DisplayFor(model => model[i].RegistrationNumber)</td>
+                    <td>@Html.DisplayFor(model => model[i].FirstName)</td>
+                    <td>@Designation</td>
+                    <td>@Html.DisplayFor(model => model[i].AuditorName)</td>
+                    <td>@Strdate</td>
+                    @*<td>
+                        <b><a href="../Content/Upload/SCMPROCEEDINGSREQUEST/UploadSCMHardCopy/@Model[i].SCMhardcopyview" target="_blank">View</a></b>
+                    </td>*@
+                    <td>
+                        @if (Model[i].Checked == true)
+                        {
+                            <span>Selected</span>
+                        }
+                        else
+                        {
+                            <span>Not-Selected</span>
+                        }
+
+
+                    </td>
+                    @*<td>
+                        @Html.ActionLink("View", "ViewFacultyDetails", "Faculty", new { fid = UAAAS.Models.Utilities.EncryptString(Model[i].facultyId.ToString(), System.Web.Configuration.WebConfigurationManager.AppSettings["CryptoKey"]) }, new { @class = "view_button", target = "_blank" })
+                    </td>*@
+                    <td style="text-align: center; vertical-align: middle">
+                        @if (Model[i].Approved == true)
+                        {
+                            <span><b>Yes</b></span>
+                            @*@Html.ActionLink("Approve", "ApprovedFaculty", "CollegeSCMProceedingsRequest", new { facultyAddId = @Model[i].ScmfacultyaddedId, collegeId = Request.Params["collegeId"] }, new { @class = "create_button" })*@
+                        }else if (Model[i].Approved == false)
+                        {
+                             <span><b>No</b></span>
+                        }
+                        else
+                        {
+                             <span><b></b></span>
+                        }
+                    </td>
+                    @*<td style="text-align: center; vertical-align: middle; width: 160px">
+                        @if (Model[i].Approved != true && Model[i].Approved != false)
+                        {
+                            @Html.ActionLink("Not Approve", "NotApproveFaculty", "CollegeSCMProceedingsRequest", new { facultyAddId = @Model[i].ScmfacultyaddedId, collegeId = Request.Params["collegeId"] }, new { @class = "editDialog create_button" })
+                        }
+                    </td>*@
+                    <td>
+                        @Html.DisplayFor(model => model[i].Remarks)
+                    </td>
+                </tr>
+
+            }
+        }
+   
+   
+</table>
+

@@ -1,0 +1,318 @@
+﻿@using Microsoft.Ajax.Utilities
+@using UAAASSCM.Controllers
+
+@model List<UAAASSCM.Controllers.ScmUploadedData>
+
+@{
+    ViewBag.Title = "User Home";
+    if (User.Identity.Name == "admin")
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    }
+
+    int count = 1;
+    string blacklistcolor = string.Empty;
+}
+
+<h2>Nominee SCM Upload </h2>
+@if (TempData["Error"] != null)
+{
+    <div class="error">
+        <p><strong>Error:</strong> @TempData["Error"].ToString()</p>
+    </div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="success">
+        <p><strong>Success:</strong> @TempData["Success"].ToString()</p>
+    </div>
+}
+
+    @*@Html.ActionLink("Dept wise Faculty", "DeptWiseApprovedFaculty", "User")*@
+    <div>
+
+        @using (Html.BeginForm("Index", "User", FormMethod.Post, new { enctype = "multipart/form-data", DesignationId = Request.Params["DesignationId"] }))
+        {
+            <table width="100%">
+                @if (ViewBag.Colleges != null)
+                {
+                    <tr>
+                        <td class="col1" width="15%" style="font-weight: bold"><span>Colleges</span></td>
+                        <td class="col2" width="85%">
+                            @Html.DropDownList("collegeId", new SelectList(ViewBag.Colleges as System.Collections.IEnumerable, "collegeId", "collegeName"), "---Select--", new { @id = "collegeId", style = "max-width: none;width:700px" })
+                        </td>
+                    </tr>
+                }
+                @if (ViewBag.departments != null)
+                {
+                    <tr>
+                        <td class="col1" width="15%" style="font-weight: bold"><span>Branch/Specialization</span></td>
+                        <td class="col2" width="85%">
+                            @Html.DropDownList("SpecializationId", new SelectList(ViewBag.departments as System.Collections.IEnumerable, "SpecializationId", "SpecializationName"), "---Select--", new { @id = "SpecializationId", style = "min-width:150px" })
+                        </td>
+                    </tr>
+                    @*<tr>
+                            <td class="col1" width="15%" style="font-weight: bold"><span>Designation</span></td>
+                            <td class="col2" width="85%">
+                                @Html.DropDownList("DesignationId", new SelectList(ViewBag.Designations as System.Collections.IEnumerable, "Id", "Name"), "---Select--", new { @id = "DesignationId", style = "max-width: none" })
+                            </td>
+                        </tr>*@
+                }
+
+            </table>
+            <br />
+            <table width="100%" id="tbl1" style="border-collapse: collapse; border: 1px solid #C0C0C0">
+                <tr style="background-color: #C1D4E6">
+                    <th rowspan="2">S.No.</th>
+                    <th rowspan="2">Registration Number</th>
+                    <th rowspan="2">Name</th>
+                    @*<th>Degree</th>
+                        <th>Department</th>
+                        <th>Specialization</th>*@
+                    <th colspan="3" style="text-align: center; color: blue  ">
+                        Degree, Department,Specialization  Applied for
+                    </th>
+                    <th rowspan="2">Designation</th>
+                    <th rowspan="2">Select</th>
+                </tr>
+                <tr style="background-color: #C1D4E6">
+                    <th>Degree</th>
+                    <th>Department</th>
+                    <th>Specialization</th>
+
+                </tr>
+                @if (Model != null && Model.Count() != 0)
+                {
+
+                    for (int i = 0; i < Model.Count(); i++)
+                    {
+
+
+                        <tr style="background-color:#FCF1D1">
+                            <td>
+                                @(i + 1)
+                                @Html.HiddenFor(model => model[i].SCMId)
+                                @Html.HiddenFor(model => model[i].SpecializationId)
+                                @Html.HiddenFor(model => model[i].DegreeId)
+                                @Html.HiddenFor(model => model[i].DepartmentId)
+                                @Html.HiddenFor(model => model[i].RegistrationNumber)
+                                @Html.HiddenFor(model => model[i].CollegeId)
+                                @Html.HiddenFor(model => model[i].DesignationId)
+                                @Html.HiddenFor(model => model[i].AuditorId)
+                                @Html.HiddenFor(model => model[i].AId)
+                            </td>
+                            <td>@Html.DisplayFor(model => model[i].RegistrationNumber)</td>
+                            <td>@Html.DisplayFor(model => model[i].FirstName)</td>
+                            <td>@Html.DisplayFor(model => model[i].Degree)</td>
+                            <td>@Html.DisplayFor(model => model[i].Department)</td>
+                            <td>@Html.DisplayFor(model => model[i].Specialization)</td>
+                            <td>@Html.DisplayFor(model => model[i].DesignationName)</td>
+
+                            <td>
+                                @if (Model[i].Blacklist == true)
+                {
+                <span style="color: red"><b>Black Listed</b></span>
+                @Html.HiddenFor(model => model[i].Checked)
+                }
+                else
+                {
+                @Html.CheckBoxFor(model => model[i].Checked)
+                }
+
+                            </td>
+                        </tr>
+                    }
+                }
+
+            </table>
+
+            if (@ViewBag.SCMData != 0 && @ViewBag.SCMData != null)
+            {
+                <br />
+                <table width="100%" id="tbl2" style="">
+                    <tr>
+                        <td style="background-color: #E8EFF3; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;" width="30%">
+                            <span><b>Upload Hard copy of SCM duly Signed by SCM Members</b></span>
+                        </td>
+                        <td style="background-color: #FCF1D1; padding-left: 5px">
+                            <div class="SCMHardcopys">
+                                @Html.TextBox("SCMHardcopy", "", new { type = "file", @required = true, @class = "SCMHardcopy" })
+                                <span style="color: red;"></span>
+                            </div>
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #E8EFF3; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;vertical-align: top" width="30%">
+                            <b>Remarks</b>
+                        </td>
+                        <td style="background-color: #FCF1D1; padding: 10px">
+                            @Html.TextArea("Remarks", "", new { style = "resize: none;width: 99%", @maxlength = "1995" })
+                        </td>
+                    </tr>
+                </table>
+
+                <br />
+                <div>
+                    <p style="text-align: right">
+                        <input type="Submit" value="Submit" id="btnSubmit" style="background-color: #024b74;color: white" />
+                    </p>
+                </div>
+            }
+
+
+        }
+    </div>
+
+    @*<script src="@Url.Content("http://112.133.193.228:75/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("http://112.133.193.228:75/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("http://112.133.193.228:75/Scripts/Validations.js")" type="text/javascript"></script>*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //get pdf file size
+            function GetNotificationFileSize(fileid) {
+                debugger;
+                try {
+                    var fileSize = 0;
+                    //for IE
+                    //if ($.browser.msie) {
+                    //    //before making an object of ActiveXObject, //please make sure ActiveX is enabled in your IE browser
+                    //    var objFSO = new ActiveXObject("Scripting.FileSystemObject");
+                    //    var filePath = $("#" + fileid)[0].value;
+                    //    var objFile = objFSO.getFile(filePath);
+                    //    var fileSize = objFile.size; //size in kb
+                    //    //alert(fileSize);
+                    //    //fileSize = fileSize / 1048576; //size in mb
+                    //    // fileSize = fileSize / 1048576; //size in mb
+                    //    alert(fileSize);
+                    //}
+                    //    //for FF, Safari, Opeara and Others
+                    //else {
+                    fileSize = $("#SCMHardcopy")[0].files[0].size; //size in kb
+                    //fileSize = fileSize / 1048576; //size in mb
+                    // }
+                    return fileSize;
+                }
+                catch (e) {
+
+                    // alert("Error is : " + e);
+                }
+            }
+
+
+            //get file path from client system
+            function getNameFromPath(strFilepath) {
+                var objRE = new RegExp(/([^\/\\]+)$/);
+                var strName = objRE.exec(strFilepath);
+
+                if (strName == null) {
+                    return null;
+                } else {
+                    return strName[0];
+                }
+            }
+
+
+            //change function for pdf doc
+            $(".SCMHardcopy").change(function () {
+                debugger;
+                var file = getNameFromPath($(this).val());
+                var flag;
+                if (file != null) {
+                    debugger;
+                    var extension = file.substr((file.lastIndexOf('.') + 1));
+                    var size = GetNotificationFileSize(file);
+                    // size = size / 1048576;
+                    size = size / 5242880;
+                    if (size > 1) {
+                        $(".SCMHardcopys > span").text("Document should not exceed 5 MB in Size");
+                        $(this).val('');
+                    } else {
+
+                        $(".SCMHardcopys > span").text("");
+                    }
+                    //    switch (extension) {
+                    //        case 'pdf':
+                    //        case 'PDF':
+
+                    //            flag = true;
+                    //            break;
+                    //        default:
+                    //            flag = false;
+                    //    }
+
+                    //}
+
+                    //if (flag == false) {
+                    //    $(".SCMHardcopys > span").text("You can upload only  Pdf files");
+                    //    $(this).val('');
+                    //    return false;
+                    //} else {
+                    //    var size = GetNotificationFileSize(file);
+                    //    // size = size / 1048576;
+                    //    size = size / 5242880;
+                    //    if (size > 1) {
+                    //        $(".SCMHardcopys > span").text("Document should not exceed 5 MB in Size");
+                    //        $(this).val('');
+                    //    } else {
+
+                    //        $(".SCMHardcopys > span").text("");
+                    //    }
+                }
+
+            });
+
+
+
+        });
+
+        $("#collegeId").change(function () {
+            var collegeId = $(this).val();
+            if (collegeId !== "") {
+                window.location = '/User/Index?collegeId=' + collegeId;
+            } else {
+                window.location = '/User/Index';
+            }
+        });
+
+        $("#SpecializationId").change(function () {
+            var specalizationId = $(this).val();
+            var collegeId = $("#collegeId").val();
+            if (collegeId !== "" && specalizationId !== "") {
+                window.location = '/User/Index?collegeId=' + collegeId + '&specializationId=' + specalizationId;
+            } else {
+                window.location = '/User/Index';
+            }
+        });
+
+
+
+        $("#DesignationId").change(function () {
+            var DesignationId = $(this).val();
+            var specalizationId = $("#SpecializationId").val();
+            var collegeId = $("#collegeId").val();
+            if (collegeId !== "" && specalizationId !== "" && DesignationId !== "") {
+                window.location = '/User/Index?collegeId=' + collegeId + '&specializationId=' + specalizationId + '&DesignationId=' + DesignationId;
+            } else {
+                window.location = '/User/Index';
+            }
+        });
+
+
+
+
+
+    </script>
+
+    <style>
+        #tbl1 tr th, #tbl1 tr td {
+            border: 1px solid #C0C0C0;
+            padding: 5px;
+        }
+    </style>

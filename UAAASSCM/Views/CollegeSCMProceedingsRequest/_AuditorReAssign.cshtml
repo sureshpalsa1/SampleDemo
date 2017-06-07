@@ -1,0 +1,128 @@
+﻿
+@model UAAAS.Controllers.College.ReassignAuditorsCheck
+@{
+    string requestDate = "";
+}
+
+@using (Ajax.BeginForm("AuditorReAssign", "CollegeSCMProceedingsRequest", new AjaxOptions()))
+{
+    
+    <p style="background: #fcf1d1; vertical-align: middle;text-align:center">
+        @*<input type="checkbox" id="Chk_new" value="1"/><span><b>New</b></span>*@
+        @Html.CheckBoxFor(model=>model.IsNeworOld)<span><b>New</b></span>
+    </p>
+    <br/>
+
+    <table width="100%">
+        <thead style="background: #C1D4E6; font-weight: bold; text-align: left; border: 1px solid #C0C0C0; padding: 5px">
+            <tr>
+                <th width="5%">S.No.</th>
+                <th width="5%">Select</th>
+                <th width="60%">Nominee Name</th>
+                <th width="40%">Nominee Designation</th>
+            </tr>
+        </thead>
+        <tbody style="background: #FCF1D1; border: 1px solid #C0C0C0; padding: 5px">
+            @if (Model.Auditors.Count() > 0)
+            {
+                for (int i = 0; i < Model.Auditors.Count(); i++)
+                {
+                    <tr>
+                        <td width="5%" style="text-align: center">
+                            @(i + 1)
+                            @Html.HiddenFor(model => Model.Auditors[i].AditorId)
+                            @Html.HiddenFor(model => Model.Auditors[i].SCMRequestId)
+                            @Html.HiddenFor(model => Model.Auditors[i].AssignedAuditorId)
+                            @Html.HiddenFor(model => Model.Auditors[i].AssignedDate)
+                            @Html.HiddenFor(model => Model.Auditors[i].CollegeId)
+                        </td>
+                        <td width="5%" style="text-align: center">@Html.CheckBoxFor(model => Model.Auditors[i].Checke)</td>
+                        <td width="60%">@Html.DisplayFor(model => Model.Auditors[i].AditorName)</td>
+                        <td width="40%">@Html.DisplayFor(model => Model.Auditors[i].Designation)</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <div style="text-align: center">
+        <p>
+            <input id="btnsubmit" type="submit" value="Submit" class="create_button" />
+        </p>
+    </div>
+    if (@ViewBag.SelectedSCMRequest.Count != 0)
+    {
+        <table style="width:100%">
+            <thead style="background: #C1D4E6; font-weight: bold; text-align: left; border: 1px solid #C0C0C0; padding: 5px">
+                <tr>
+                    <th style="width:10%">Code</th>
+                    <th style="width:50%">College Name</th>
+                    <th style="width:30%">Department</th>
+                    <th style="width:10%">Submited Date</th>
+                </tr>
+            </thead>
+            <tbody style="background: #FCF1D1; border: 1px solid #C0C0C0; padding: 5px">
+                @foreach (var pay in ((List<UAAAS.Controllers.College.ScmProceedingsRequest>)ViewBag.SelectedSCMRequest).Select((value, i) => new { i = i + 1, value }))
+                {
+                    if (@pay.value.CreatedDate != null)
+                    {
+                        requestDate = UAAAS.Models.Utilities.MMDDYY2DDMMYY(pay.value.CreatedDate.ToString());
+                    }
+                    else
+                    {
+                        requestDate = "";
+                    }
+                    <tr>
+                        <td style="width:10%">@pay.value.CollegeCode</td>
+                        <td style="width:50%">@pay.value.CollegeName</td>
+                        <td style="width:30%">@pay.value.DepartmentName</td>
+                        <td style="width:10%">@requestDate</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+}
+<style>
+    table thead tr {
+        height: 30px;
+    }
+
+    table thead tr th {
+        vertical-align: middle;
+        padding: 5px;
+    }
+
+    table tbody tr {
+        height: 25px;
+    }
+
+    table tbody tr td {
+        vertical-align: middle;
+        padding: 3px;
+    }
+</style>
+
+<div id="btn_alert" style="display:none">
+    <span>Please Select New Checkbox in the Uppper</span>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#btnsubmit").live("click", function () {
+            $("#btn_alert").dialog({
+                autoOpen: false,
+                title: "Alert",
+                show: { effect: 'drop', direction: "up" },
+                hide: 'explode',
+                width: 300,
+                height: 200,
+                top: 50,
+                position: 'center',
+                buttons: { 'OK': function () { $(this).dialog('close'); } },
+                closeOnEscape: true,
+                resizable: false
+            });
+        });
+    });
+</script>

@@ -1,0 +1,1416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6639CD70-15D9-4AD3-B3AD-B80285B7EBC3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UAAASSCM</RootNamespace>
+    <AssemblyName>UAAASSCM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\Product\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mvc.Mailer">
+      <HintPath>..\..\Product\bin\Mvc.Mailer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AuthorizedUserAccess.cs" />
+    <Compile Include="Controllers\CollegeSCMProceedingsRequestController.cs" />
+    <Compile Include="Controllers\CollegeSCMProceedingsRequestForAdminController.cs" />
+    <Compile Include="Controllers\FacultyController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ITextEvents.cs" />
+    <Compile Include="Controllers\SCMReportsController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\Utilities.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Mailers\IUserMailer.cs" />
+    <Compile Include="Mailers\UserMailer.cs" />
+    <Compile Include="Models\aadhaarnumbernotexistsinlive.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\admittedintake.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\all_college_emails.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C2013_2014_mba.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C2013_2014_mca.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C2013_2014_mpharm.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C2013_2014_mtech.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C2014_15_bpharrmacy.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C2014_15_btech.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C2014_2015_mba.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C2014_2015_mca.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C2014_2015_mpharm.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C2014_2015_mtech.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\collegefaculty_1.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\collegesintake.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\colleges_groups.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\college_circulars.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\college_clusters.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\college_faculty_2013_14.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\college_faculty_2014_15.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\college_grade.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\college_undertaking.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\committeemembers2015.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\facultyanalysis_2013_14.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\facultyanalysis_2013_14_count.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\facultyanalysis_2014_15.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\facultyanalysis_2014_15_count.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_academic_performance.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_academic_year.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_address.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_adjunctregistered_faculty_education_log.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_adjunct_registered_faculty_log.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_affiliation_requests.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_affiliation_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_appeal_auditors_dataentry.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_appeal_auditor_assigned.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_appeal_college_edit_status.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_appeal_college_intake_existing.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_appeal_college_intake_existing_supportingdocuments.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_appeal_college_laboratories.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_appeal_faculty_registered.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_appeal_mbadeficiency.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_appeal_principal_registered.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_appeal_scmproceedingrequest_addfaculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_appeal_scmproceedingsrequests.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_approach_road.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_area_requirement.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_attendence_registrationnumberstracking.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_auditors_dataentry.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_auditor_assigned.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_bpharmacy_faculty_deficiency.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_chairperson_designation.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_changeuserid.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_collegestatus.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_416randomcodes.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_academic_performance.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_academic_performance_points.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_affiliation.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_affiliation_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_affliationstatus.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_antiragging_committee.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_antiragging_complaints.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_area.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_batch_performance.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_chairperson.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_closure.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_committee_observations.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_computer_lab.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_computer_lab_printers.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_computer_student_ratio.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_deficiencyandheringdates.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_degree.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_desirable_others.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_desirable_requirement.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_document.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_edit_remarks.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_edit_status.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_edit_status_log.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_enclosures.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_enclosures_hardcopy.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_establishment.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_examination_branch.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_examination_branch_edep.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_examination_branch_security.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_examination_branch_staff.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_expenditure.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_expenditure_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_experiments.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_faculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_faculty_2013_14.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_faculty_deficiency.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_faculty_registered.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_faculty_registered_test.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_faculty_student_ratio.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_faculty_verified.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_fee_reimbursement.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_ffc_overall_faculty_studentratio.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_funds.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_grievance_committee.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_grievance_complaints.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_hostel_maintenance.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_income.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_income_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_infrastructure_parameters.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_intake_existing.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_intake_existing_copy.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_intake_existing_datentry2.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_intake_existing_log.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_intake_proposed.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_internet_bandwidth.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_lab.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_laboratories.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_laboratories_dataentry2.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_laboratories_deficiency.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_land.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_land_registration.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_legal_software.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_library.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_library_details.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_miscellaneous_parameters.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_name_change.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_news.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_news_old.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_nodepartments.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_other_university_courses.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_overall_faculty_studentratio.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_payment.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_paymentoffee.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_paymentoffee_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_pgcourses.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_pgcourse_faculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_placement.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_principal_director.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_principal_ratified.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_principal_registered.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_randamcodes.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_rti_complaints.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_rti_details.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_screens.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_screens_assigned.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_screens_assigned_log.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_sports.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_staticdata_modifications.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_status.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_teaching_faculty_position.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_terms_accepted.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_users.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_women_protection_cell.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_college_women_protection_cell_complaints.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_committee_observations.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_committee_submission.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_computer_student_ratio_norms.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_course_affiliation_status.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_dataentry_allotment.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_dates.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_deficiencyrepoprt_college_pendingdocuments.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_degree.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_degree_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_department.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_designation.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_desirable_requirement_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_district.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_documents_required.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_download.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_edep_equipment.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_edit_principals.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_edit_registred_faculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_education_category.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_enclosures.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_error_log.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_facility_status.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_faculty_category.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_faculty_deactivation_reason.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_faculty_education.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_faculty_student_ratio_norms.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_faculty_subjects.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_faculty_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_feedback.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_ffc_auditor.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_ffc_auditor_campus.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_ffc_cluster_emails.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_ffc_committee.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_ffc_external_auditor.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_ffc_external_auditor_groups.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_ffc_order.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_ffc_schedule.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_grc_designation.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_infrastructure_parameters.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_inspection_phase.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_internet_bandwidth_norms.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_lab_first_year.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_lab_master.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_lab_master_copy.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_lab_master_copy_old.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_lab_master_experments.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_lab_master_temp.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_land_category.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_land_registration_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_land_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_menu.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_miscellaneous_parameters.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_newsevents.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_noscmfaculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_notin415faculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_other_information_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_panduplicatesassociatedwithcollegefaculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_pan_status.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_paymentrequests.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_paymentrequests_copy.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_paymentresponse.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_paymentresponse_copy.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_paymentresponse_new.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_payment_mode.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_phdundertaking.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_phd_subject.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_physical_labmaster.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_physical_labmaster_copy.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_printers_norms.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_program_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_qualification.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_copy_old.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_education.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_education11.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_education_log.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_education_log_copy_08042017.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_education_log_old.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_education_new.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_education_oldfaculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_experience.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_experience_log.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_labels.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_log.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_log_old.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_noscm.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_noscmold.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registered_faculty_oldfaculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_registration.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_reinspection_college_laboratories.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_reinspection_college_laboratories_deficiency.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_reinspection_registered_faculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_reinspection_registered_faculty_education.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_samepan.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_scm.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_scmproceedingrequest_addfaculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_scmproceedingrequest_addfaculty_copy.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_scmproceedingsrequests.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_scmproceedingsrequests_copy.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_scmupload.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_scm_new.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_settings.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_shift.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_smssendstatus.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_society_other_colleges.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_society_other_locations_colleges.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_software_norms.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_specialization.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_sports_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_stackholder_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_state.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_transport_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_ugregistrationnumbers.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_university.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_updatedfaculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_updatenoscmstatus.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_water_type.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntuh_year_in_degree.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jntu_phd.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_applications.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_membership.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_paths.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_personalizationallusers.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_personalizationperuser.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_profiles.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_roles.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_sessioncleanup.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_sessions.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_sitemap.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_users.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\my_aspnet_usersinroles.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\neweollegefaculty.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SCMModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCMModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SCMModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SCMModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCMModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tagsremovedfacultyregnumber.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp_aeronautical.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp_automobile.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp_faculty_analysis_2013_14.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp_faculty_analysis_2014_15.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\user_browsers.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\user_login_logout.cs">
+      <DependentUpon>SCMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\ApplicationErrorPage.html" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dataTables\demo_page.css" />
+    <Content Include="Content\dataTables\demo_table.css" />
+    <Content Include="Content\dataTables\demo_table_jui.css" />
+    <Content Include="Content\images\active.png" />
+    <Content Include="Content\images\admitted.png" />
+    <Content Include="Content\images\announcement-24.png" />
+    <Content Include="Content\images\application-small-list-blue.png" />
+    <Content Include="Content\images\approved.png" />
+    <Content Include="Content\images\arrow-right-16.png" />
+    <Content Include="Content\images\arrow_000_small.png" />
+    <Content Include="Content\images\back_disabled.jpg" />
+    <Content Include="Content\images\back_enabled.jpg" />
+    <Content Include="Content\images\bullet_orange.gif" />
+    <Content Include="Content\images\check.png" />
+    <Content Include="Content\images\checkbox_no.png" />
+    <Content Include="Content\images\checkbox_no_1.png" />
+    <Content Include="Content\images\checkbox_no_b.png" />
+    <Content Include="Content\images\checkbox_yes.png" />
+    <Content Include="Content\images\checkbox_yes_1.png" />
+    <Content Include="Content\images\checkbox_yes_b.png" />
+    <Content Include="Content\images\contact.png" />
+    <Content Include="Content\images\delete.png" />
+    <Content Include="Content\images\details_close.png" />
+    <Content Include="Content\images\details_open.png" />
+    <Content Include="Content\images\director.jpg" />
+    <Content Include="Content\images\directorNew.jpg" />
+    <Content Include="Content\images\edit.png" />
+    <Content Include="Content\images\email-send.png" />
+    <Content Include="Content\images\email.png" />
+    <Content Include="Content\images\error.png" />
+    <Content Include="Content\images\error1.png" />
+    <Content Include="Content\images\excel.png" />
+    <Content Include="Content\images\faculty-registration.jpg" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\file-pdf.png" />
+    <Content Include="Content\images\forward_disabled.jpg" />
+    <Content Include="Content\images\forward_enabled.jpg" />
+    <Content Include="Content\images\hand-point.png" />
+    <Content Include="Content\images\hill_road.jpg" />
+    <Content Include="Content\images\horizontal_swipe-16.png" />
+    <Content Include="Content\images\horizontal_swipe-20.png" />
+    <Content Include="Content\images\inactive.png" />
+    <Content Include="Content\images\jntu-logo.png" />
+    <Content Include="Content\images\jntu_admin_building.jpg" />
+    <Content Include="Content\images\jntu_header_bg.jpg" />
+    <Content Include="Content\images\jntu_logo_big.png" />
+    <Content Include="Content\images\latest.gif" />
+    <Content Include="Content\images\loader.gif" />
+    <Content Include="Content\images\logo_jntu.jpg" />
+    <Content Include="Content\images\mail.png" />
+    <Content Include="Content\images\new_email.png" />
+    <Content Include="Content\images\new_logo.jpg" />
+    <Content Include="Content\images\new_logo_1.jpg" />
+    <Content Include="Content\images\no-photo.gif" />
+    <Content Include="Content\images\no-photo.png" />
+    <Content Include="Content\images\not_submitted.png" />
+    <Content Include="Content\images\open.jpg" />
+    <Content Include="Content\images\order.png" />
+    <Content Include="Content\images\page_white_word.png" />
+    <Content Include="Content\images\pdf.png" />
+    <Content Include="Content\images\registrar_sign.png" />
+    <Content Include="Content\images\revised-order.png" />
+    <Content Include="Content\images\signature.png" />
+    <Content Include="Content\images\sort_asc.png" />
+    <Content Include="Content\images\sort_asc_disabled.png" />
+    <Content Include="Content\images\sort_both.png" />
+    <Content Include="Content\images\sort_desc.png" />
+    <Content Include="Content\images\sort_desc_disabled.png" />
+    <Content Include="Content\images\Star-Empty.png" />
+    <Content Include="Content\images\submitted.png" />
+    <Content Include="Content\images\success.png" />
+    <Content Include="Content\images\thumbail1.jpg" />
+    <Content Include="Content\images\thumbnail.png" />
+    <Content Include="Content\images\thumbs.jpg" />
+    <Content Include="Content\images\trees.jpg" />
+    <Content Include="Content\images\tree_root.jpg" />
+    <Content Include="Content\images\two_finger_horizontal_swipe-16.png" />
+    <Content Include="Content\images\ui-splitter-horizontal.png" />
+    <Content Include="Content\images\vc.jpg" />
+    <Content Include="Content\images\vcic.jpg" />
+    <Content Include="Content\images\vcic1.jpg" />
+    <Content Include="Content\images\view.png" />
+    <Content Include="Content\images\view_1.png" />
+    <Content Include="Content\images\view_2.png" />
+    <Content Include="Content\images\warning.png" />
+    <Content Include="Content\images\word.png" />
+    <Content Include="Content\jntuh-styles.css" />
+    <Content Include="Content\SCMFacultyData.html" />
+    <Content Include="Content\SCMReportDownload.html" />
+    <Content Include="Content\SCMReportDownloadDeptWise.html" />
+    <Content Include="Content\SCMReportSendtoNominee.html" />
+    <Content Include="Content\SCMRequestDownload.html" />
+    <Content Include="Content\themes\base\images\calendar.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\smoothness\jquery-ui-1.7.2.custom.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\images\Sorting icons.psd" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\SCMModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SCMModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SCMModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SCMModel.edmx</DependentUpon>
+      <LastGenOutput>SCMModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SCMModel.edmx.diagram">
+      <DependentUpon>SCMModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\SCMModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SCMModel.edmx</DependentUpon>
+      <LastGenOutput>SCMModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\Counter\flipclock.css" />
+    <Content Include="Scripts\Counter\flipclock.js" />
+    <Content Include="Scripts\Counter\flipclock.min.js" />
+    <Content Include="Scripts\from-html.js" />
+    <Content Include="Scripts\html2canvas.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-te-1.4.0.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.base64.js" />
+    <Content Include="Scripts\jquery.dataTables.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery.fileupload.js" />
+    <Content Include="Scripts\jquery.iframe-transport.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jspdf.js" />
+    <Content Include="Scripts\jspdf.plugin.from_html.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Slider\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\Slider\jquery.bxslider.min.js" />
+    <Content Include="Scripts\Slider\main.css" />
+    <Content Include="Scripts\Slider\main.js" />
+    <Content Include="Scripts\Slider\modernizr-2.6.2.min.js" />
+    <Content Include="Scripts\tableExport.js" />
+    <Content Include="Scripts\Timepicker\jquery.ptTimeSelect.css" />
+    <Content Include="Scripts\Timepicker\jquery.ptTimeSelect.js" />
+    <Content Include="Scripts\Validations.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\vendor\jquery.ui.widget.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout1.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Admin\UserRegistration.cshtml" />
+    <Content Include="Views\Admin\UserCreationView.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\DeptWiseApprovedFaculty.cshtml" />
+    <Content Include="Views\Admin\CollegewiseDetails.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequestForAdmin\CollegeScmProceedingsRequest.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequestForAdmin\CollegeScmProceedingsRequestView.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequestForAdmin\ViewFaculty.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequestForAdmin\_AddAuditors.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequestForAdmin\_AddRegistrationNumber.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\CollegeScmProceedingsPrincipalRequest.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\CollegeScmProceedingsRequest.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\CollegeScmProceedingsRequestScreen.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\CollegeScmProceedingsRequestView.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\ScmFacultyVerfication.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\SCMRequestsList.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\SCMUpload.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\SCMUploadView.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\TempFacultyVerification.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\ViewFaculty.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\_AddRegistrationNumber.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\_NotApproveFaculty.cshtml" />
+    <Content Include="Views\Faculty\ViewFacultyDetails.cshtml" />
+    <Content Include="Views\Admin\Links.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Shared\_LayoutUser.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Admin\SCMPrincipalview.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequestForAdmin\_AddAuditortoPrincipal.cshtml" />
+    <Content Include="Views\User\PrincipalNomineeDataEntry.cshtml" />
+    <Content Include="Views\User\PrincipalSelectedView.cshtml" />
+    <Content Include="Views\Admin\SCMPrincipalVerification.cshtml" />
+    <Content Include="Views\Admin\_NotApproveFaculty.cshtml" />
+    <Content Include="Views\Admin\SCMPrincipalSelectView.cshtml" />
+    <Content Include="Views\Admin\ChangePassword.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\CollegeScmProceedingsRequestNomineeAssignedview.cshtml" />
+    <Content Include="Views\User\showSCMmenuforUser.cshtml" />
+    <Content Include="Views\Admin\NomineeAssignedSCMPrincipalRequests.cshtml" />
+    <Content Include="Views\Admin\ApprovedFacultyBasedOnNominee.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\PrincipalSCMUploadView.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\ProfessorsUploadedCollegs.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\ProfessorsScmProceedingsRequestView.cshtml" />
+    <Content Include="Views\Admin\SCMPrincipalviewPrint.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\FacultyVerificationForProfessors.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\_NotApproveProfessorFaculty.cshtml" />
+    <Content Include="Views\Home\EmailChange.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\NomineeReassignView.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\_AuditorReAssign.cshtml" />
+    <Content Include="Views\Admin\getAllAuditors.cshtml" />
+    <Content Include="Views\Admin\getAllSCMdeatails.cshtml" />
+    <Content Include="Views\Admin\_getSCMrecordsbyID.cshtml" />
+    <Content Include="Views\Shared\_LayoutDataverification.cshtml" />
+    <Content Include="Views\Shared\_AdminLayoutPage.cshtml" />
+    <Content Include="Views\Admin\getSCMrecordsbyID.cshtml" />
+    <Content Include="Views\Admin\OthersDeptColleges.cshtml" />
+    <Content Include="Views\Admin\ViewFaculty.cshtml" />
+    <Content Include="Views\Admin\_FacultyMoving.cshtml" />
+    <Content Include="Views\Admin\DataEntryCreation.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\ProfessorSCMRequestsList.cshtml" />
+    <Content Include="Views\Home\FindRegistrationNumber.cshtml" />
+    <Content Include="Views\Home\FacultyView.cshtml" />
+    <Content Include="Views\Admin\CollegeWiseApprovedReport.cshtml" />
+    <Content Include="Views\Admin\_CollegeWiseApprovedReport.cshtml" />
+    <Content Include="Views\Admin\CollegewiseDetailsReset.cshtml" />
+    <Content Include="Views\CollegeSCMProceedingsRequest\__NotApproveFacultyAss.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50726</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50726/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,123 @@
+﻿@model IList<UAAASSCM.Controllers.ScmProceedingsRequestAddReg>
+@{
+    ViewBag.Title = "View Added Faculty";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>View Added Faculty</h2>
+
+
+
+@using (Html.BeginForm())
+{
+    if (TempData["Error"] != null)
+    {
+        <div class="error">
+            <p><strong>Error:</strong> @TempData["Error"].ToString()</p>
+        </div>
+    }
+    if (TempData["Success"] != null)
+    {
+        <div class="success">
+            <p><strong>Success:</strong> @TempData["Success"].ToString()</p>
+        </div>
+    }
+    <table class="webGrid">
+        <thead>
+            <tr class="gridHeader">
+                <th>S.No.</th>
+                <th>Specilization</th>
+                <th>Registration Number</th>
+                <th>Faculty Name</th>
+                <th>Designation</th>
+                <th>View Faculty</th>
+                <th>Move Faculty</th>
+            </tr>
+        </thead>
+        <tbody style="background: #FCF1D1;">
+            @for (int i = 0; i < Model.Count(); i++)
+            {
+                <tr>
+                    <td>
+                        @Html.HiddenFor(m => m[i].Id)
+                        @Html.HiddenFor(m => m[i].CollegeId)
+                        @Html.HiddenFor(m => m[i].SpecializationId)
+                        @(i + 1)
+                    </td>
+                    <td>@Html.DisplayFor(m => m[i].SpecializationName)</td>
+                    <td>@Html.DisplayFor(m => m[i].Regno)</td>
+                    <td>@Html.DisplayFor(m => m[i].RegName)</td>
+                    <td>@Html.DisplayFor(m => m[i].Designation)</td>
+                    <td style="text-align: center; vertical-align: middle">
+                        @Html.ActionLink("View", "ViewFacultyDetails", "Faculty", new {fid = UAAAS.Models.Utilities.EncryptString(Model[i].FacultyId.ToString(), System.Web.Configuration.WebConfigurationManager.AppSettings["CryptoKey"])}, new {@class = "view_button", target = "_blank"})
+                    </td>
+                    <td style="text-align: center; vertical-align: middle">
+                        @if (Model[i].OtherFacultyMovingStatus == true)
+                        {
+                            <span class="deactivate_button"></span>
+                        }
+                        else
+                        {
+                         @Html.ActionLink("Move", "FacultyMoving", "Admin", new { @ScmId = Model[i].ScmId, @RegNo = Model[i].Regno, @DesignationId = Model[i].DesignationId, @AddFacultyId = Model[i].Id }, new { @class = "Editdailog create_button" })
+                        }
+                       
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+}
+
+<div id="dialog-edit" style="display: none">
+
+</div>
+<script type="text/javascript">
+    var selectedSCMIds = [];
+    $(document).ready(function () {
+        var mainUrl = window.location;
+        var url;
+        $.ajaxSetup({ cache: false });
+        var $myDialog = $("#dialog-edit").dialog({
+            title: 'Select Department',
+            autoOpen: false,
+            resizable: false,
+            height: 170,
+            width: 370,
+            show: { effect: 'drop', direction: "up" },
+            modal: true,
+            draggable: true,
+            closeOnEscape: true,
+            open: function (event, ui) {
+                $(this).load(url);
+            },
+            close: function (event, ui) {
+                $(this).dialog("close");
+            }
+        });
+        $(".Editdailog").live("click", function (e) {
+            //var ScmId = $(this).attr('scmid');
+            //var CollegeId = $(this).attr('collegeid');
+            //var AuditorId = $(this).attr('auditorid');
+            //var AssignedDate = $(this).attr('assigndate');
+            //url = "/CollegeSCMProceedingsRequest/AuditorReAssign?collegeId=" + CollegeId + "&SCMId=" + ScmId + "&AssignedDate=" + AssignedDate + "&AuditorId=" + AuditorId;
+            url = $(this).attr('href');
+            $("#dialog-edit").dialog({
+                title: 'Select Department'
+            });
+
+            $myDialog.dialog('open');
+            return false;
+        });
+
+
+    });
+
+
+</script>
+<style>
+    .webGrid a:link, .webGrid a:visited {
+        color: white;
+        text-decoration: none;
+    }
+</style>

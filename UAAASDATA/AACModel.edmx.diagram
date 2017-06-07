@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ea6b2cc8f588473abb281ef6ee722c68" Name="Diagram1">
+        <EntityTypeShape EntityType="uaaas117localModel.C2013_2014_mba" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.C2013_2014_mca" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.C2013_2014_mpharm" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.C2013_2014_mtech" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.C2014_15_bpharrmacy" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.C2014_15_btech" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.C2014_2015_mba" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.C2014_2015_mca" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.C2014_2015_mpharm" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.C2014_2015_mtech" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.all_college_emails" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.college_circulars" Width="1.5" PointX="8.25" PointY="421.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.college_clusters" Width="1.5" PointX="8.25" PointY="416.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.college_faculty_2013_14" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.college_faculty_2014_15" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.college_grade" Width="1.5" PointX="8.25" PointY="426.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.college_undertaking" Width="1.5" PointX="11.25" PointY="421.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.colleges_groups" Width="1.5" PointX="5.25" PointY="323.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.committeemembers2015" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.facultyanalysis_2013_14" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.facultyanalysis_2013_14_count" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.facultyanalysis_2014_15" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.facultyanalysis_2014_15_count" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_academic_performance" Width="1.5" PointX="5.25" PointY="327.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_academic_year" Width="1.5" PointX="5.25" PointY="331.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_address" Width="1.5" PointX="7.5" PointY="486.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_affiliation_requests" Width="1.5" PointX="10.5" PointY="482.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_affiliation_type" Width="1.5" PointX="5.25" PointY="343.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_appeal_college_edit_status" Width="1.5" PointX="8.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_appeal_college_intake_existing" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_appeal_college_intake_existing_supportingdocuments" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_appeal_college_laboratories" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_appeal_faculty_registered" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_appeal_mbadeficiency" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_appeal_principal_registered" Width="1.5" PointX="2.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_approach_road" Width="1.5" PointX="5.25" PointY="355" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_area_requirement" Width="1.5" PointX="10.5" PointY="476.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_auditor_assigned" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_bpharmacy_faculty_deficiency" Width="1.5" PointX="4.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_chairperson_designation" Width="1.5" PointX="5.25" PointY="364.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college" Width="1.5" PointX="10.5" PointY="397.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_416randomcodes" Width="1.5" PointX="14.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_academic_performance" Width="1.5" PointX="7.5" PointY="463.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_academic_performance_points" Width="1.5" PointX="7.5" PointY="389" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_affiliation" Width="1.5" PointX="7.5" PointY="398.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_affiliation_type" Width="1.5" PointX="5.25" PointY="368" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_affliationstatus" Width="1.5" PointX="14.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_antiragging_committee" Width="1.5" PointX="13.75" PointY="422.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_antiragging_complaints" Width="1.5" PointX="15.75" PointY="418.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_area" Width="1.5" PointX="18.75" PointY="441.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_batch_performance" Width="1.5" PointX="7.5" PointY="338.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_chairperson" Width="1.5" PointX="7.5" PointY="407.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_closure" Width="1.5" PointX="16.75" PointY="422.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_committee_observations" Width="1.5" PointX="18.75" PointY="415.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_computer_lab" Width="1.5" PointX="12.75" PointY="427.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_computer_lab_printers" Width="1.5" PointX="15.75" PointY="427.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_computer_student_ratio" Width="1.5" PointX="18.75" PointY="427.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_degree" Width="1.5" PointX="15.75" PointY="414.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_desirable_others" Width="1.5" PointX="19.75" PointY="420" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_desirable_requirement" Width="1.5" PointX="15.75" PointY="431.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_document" Width="1.5" PointX="12.75" PointY="413.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_edit_remarks" Width="1.5" PointX="21.75" PointY="415.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_edit_status" Width="1.5" PointX="21.75" PointY="425.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_edit_status_copy" Width="1.5" PointX="12.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_edit_status_log" Width="1.5" PointX="21.75" PointY="430.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_enclosures" Width="1.5" PointX="21.75" PointY="411.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_enclosures_hardcopy" Width="1.5" PointX="22.75" PointY="419.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_establishment" Width="1.5" PointX="18.75" PointY="410" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_examination_branch" Width="1.5" PointX="12.75" PointY="432.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_examination_branch_edep" Width="1.5" PointX="15.75" PointY="436" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_examination_branch_security" Width="1.5" PointX="18.75" PointY="432.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_examination_branch_staff" Width="1.5" PointX="12.75" PointY="409.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_expenditure" Width="1.5" PointX="15.75" PointY="409.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_expenditure_type" Width="1.5" PointX="5.25" PointY="395.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_experiments" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_faculty" Width="1.5" PointX="12.75" PointY="442" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_faculty_2013_14" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_faculty_deficiency" Width="1.5" PointX="12.75" PointY="478.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_faculty_registered" Width="1.5" PointX="24.75" PointY="414" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_faculty_registered_test" Width="1.5" PointX="16.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_faculty_student_ratio" Width="1.5" PointX="24.75" PointY="424.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_faculty_verified" Width="1.5" PointX="33" PointY="414.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_fee_reimbursement" Width="1.5" PointX="10.5" PointY="466.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_ffc_overall_faculty_studentratio" Width="1.5" PointX="15.75" PointY="475.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_funds" Width="1.5" PointX="24.75" PointY="409" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_grievance_committee" Width="1.5" PointX="24.75" PointY="428.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_grievance_complaints" Width="1.5" PointX="24.75" PointY="433.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_hostel_maintenance" Width="1.5" PointX="21.75" PointY="434.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_income" Width="1.5" PointX="25.75" PointY="419.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_income_type" Width="1.5" PointX="5.25" PointY="399.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_infrastructure_parameters" Width="1.5" PointX="21.75" PointY="406.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_intake_existing" Width="1.5" PointX="7.5" PointY="447.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_intake_existing_datentry2" Width="1.5" PointX="10.5" PointY="444.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_intake_existing_log" Width="1.5" PointX="6.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_intake_proposed" Width="1.5" PointX="10.5" PointY="451.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_internet_bandwidth" Width="1.5" PointX="27.75" PointY="424.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_lab" Width="1.5" PointX="12.75" PointY="494.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_laboratories" Width="1.5" PointX="12.75" PointY="402.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_laboratories_dataentry2" Width="1.5" PointX="15.75" PointY="403.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_laboratories_deficiency" Width="1.5" PointX="27.75" PointY="413.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_land" Width="1.5" PointX="7.5" PointY="472.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_land_registration" Width="1.5" PointX="5.25" PointY="403.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_legal_software" Width="1.5" PointX="27.75" PointY="409.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_library" Width="1.5" PointX="27.75" PointY="428.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_library_details" Width="1.5" PointX="27.75" PointY="434.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_miscellaneous_parameters" Width="1.5" PointX="18.75" PointY="405.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_name_change" Width="1.5" PointX="12.75" PointY="436.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_news" Width="1.5" PointX="28.75" PointY="419" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_news_old" Width="1.5" PointX="18.75" PointY="437" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_nodepartments" Width="1.5" PointX="16.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_other_university_courses" Width="1.5" PointX="12.75" PointY="489" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_overall_faculty_studentratio" Width="1.5" PointX="7.5" PointY="442.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_payment" Width="1.5" PointX="24.75" PointY="404" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_paymentoffee" Width="1.5" PointX="27.75" PointY="404.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_paymentoffee_type" Width="1.5" PointX="5.25" PointY="407.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_pgcourse_faculty" Width="1.5" PointX="5.25" PointY="411.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_pgcourses" Width="1.5" PointX="15.75" PointY="481.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_placement" Width="1.5" PointX="10.5" PointY="387.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_principal_director" Width="1.5" PointX="12.75" PointY="470.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_principal_ratified" Width="1.5" PointX="24.75" PointY="437.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_principal_registered" Width="1.5" PointX="30.75" PointY="414.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_randamcodes" Width="1.5" PointX="12.75" PointY="647.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_rti_complaints" Width="1.5" PointX="30.75" PointY="410.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_rti_details" Width="1.5" PointX="21.75" PointY="439.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_screens" Width="1.5" PointX="13.5" PointY="390.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_screens_assigned" Width="1.5" PointX="18.75" PointY="401.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_screens_assigned_log" Width="1.5" PointX="15.75" PointY="399.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_sports" Width="1.5" PointX="12.75" PointY="484.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_staticdata_modifications" Width="1.5" PointX="30.75" PointY="424.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_status" Width="1.5" PointX="5.25" PointY="416.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_teaching_faculty_position" Width="1.5" PointX="18.75" PointY="472.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_terms_accepted" Width="1.5" PointX="5.25" PointY="420.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_type" Width="1.5" PointX="5.25" PointY="423.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_users" Width="1.5" PointX="30.75" PointY="406.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_women_protection_cell" Width="1.5" PointX="30.75" PointY="428.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_women_protection_cell_complaints" Width="1.5" PointX="30.75" PointY="433.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_committee_observations" Width="1.5" PointX="5.25" PointY="428" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_committee_submission" Width="1.5" PointX="30.75" PointY="437.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_computer_student_ratio_norms" Width="1.5" PointX="5.25" PointY="431.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_course_affiliation_status" Width="1.5" PointX="5.25" PointY="435.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_dataentry_allotment" Width="1.5" PointX="31.75" PointY="419" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_dates" Width="1.5" PointX="16.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_deficiencyrepoprt_college_pendingdocuments" Width="1.5" PointX="16.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_degree" Width="1.5" PointX="10.5" PointY="426.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_degree_type" Width="1.5" PointX="5.25" PointY="445.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_department" Width="1.5" PointX="33.75" PointY="424.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_designation" Width="1.5" PointX="5.25" PointY="449.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_desirable_requirement_type" Width="1.5" PointX="5.25" PointY="455.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_district" Width="1.5" PointX="10.5" PointY="490.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_documents_required" Width="1.5" PointX="5.25" PointY="463.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_download" Width="1.5" PointX="5.25" PointY="467.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_edep_equipment" Width="1.5" PointX="5.25" PointY="472" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_edit_principals" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_edit_registred_faculty" Width="1.5" PointX="18.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_education_category" Width="1.5" PointX="5.25" PointY="476.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_enclosures" Width="1.5" PointX="5.25" PointY="480.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_error_log" Width="1.5" PointX="5.25" PointY="484.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_error_log24022016" Width="1.5" PointX="18.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_facility_status" Width="1.5" PointX="5.25" PointY="488.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_faculty_category" Width="1.5" PointX="5.25" PointY="492.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_faculty_deactivation_reason" Width="1.5" PointX="8.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_faculty_education" Width="1.5" PointX="24" PointY="442.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_faculty_student_ratio_norms" Width="1.5" PointX="5.25" PointY="496.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_faculty_subjects" Width="1.5" PointX="18" PointY="478.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_faculty_type" Width="1.5" PointX="5.25" PointY="500" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_feedback" Width="1.5" PointX="7.5" PointY="578.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_ffc_auditor" Width="1.5" PointX="36" PointY="437.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_ffc_auditor_campus" Width="1.5" PointX="18.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_ffc_cluster_emails" Width="1.5" PointX="21.75" PointY="402.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_ffc_committee" Width="1.5" PointX="15" PointY="704.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_ffc_external_auditor" Width="1.5" PointX="18.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_ffc_external_auditor_groups" Width="1.5" PointX="5.25" PointY="503.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_ffc_order" Width="1.5" PointX="15" PointY="707.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_ffc_schedule" Width="1.5" PointX="12.75" PointY="704.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_grc_designation" Width="1.5" PointX="5.25" PointY="507.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_infrastructure_parameters" Width="1.5" PointX="5.25" PointY="511.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_inspection_phase" Width="1.5" PointX="7.5" PointY="393.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_internet_bandwidth_norms" Width="1.5" PointX="5.25" PointY="514.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_lab_first_year" Width="1.5" PointX="10.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_lab_master" Width="1.5" PointX="36" PointY="425.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_lab_master_copy" Width="1.5" PointX="18.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_lab_master_experments" Width="1.5" PointX="39" PointY="425.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_lab_master_temp" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_lab_master1" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_land_category" Width="1.5" PointX="5.25" PointY="518.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_land_registration_type" Width="1.5" PointX="5.25" PointY="522.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_land_type" Width="1.5" PointX="5.25" PointY="526.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_menu" Width="1.5" PointX="5.25" PointY="529.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_miscellaneous_parameters" Width="1.5" PointX="5.25" PointY="534.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_newsevents" Width="1.5" PointX="5.25" PointY="537.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_noscmfaculty" Width="1.5" PointX="2.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_notin415faculty" Width="1.5" PointX="20.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_other_information_type" Width="1.5" PointX="5.25" PointY="542.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_pan_status" Width="1.5" PointX="20.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_panduplicatesassociatedwithcollegefaculty" Width="1.5" PointX="12.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_payment_mode" Width="1.5" PointX="5.25" PointY="546" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_paymentrequests" Width="1.5" PointX="20.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_paymentresponse" Width="1.5" PointX="20.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_phd_subject" Width="1.5" PointX="5.25" PointY="549.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_phdundertaking" Width="1.5" PointX="14.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_printers_norms" Width="1.5" PointX="5.25" PointY="553.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_program_type" Width="1.5" PointX="5.25" PointY="557.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_qualification" Width="1.5" PointX="5.25" PointY="560.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty" Width="1.5" PointX="42" PointY="418.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_copy" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_education" Width="1.5" PointX="47.25" PointY="436.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_education_copy" Width="1.5" PointX="4.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_education_log" Width="1.5" PointX="6.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_education_new" Width="1.5" PointX="22.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_education_oldfaculty" Width="1.5" PointX="47.25" PointY="430.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_experience" Width="1.5" PointX="15.75" PointY="441" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_experience_log" Width="1.5" PointX="27.75" PointY="440.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_labels" Width="1.5" PointX="30.75" PointY="396.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_log" Width="1.5" PointX="22.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_noscm" Width="1.5" PointX="8.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_oldfaculty" Width="1.5" PointX="45" PointY="420.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty1" Width="1.5" PointX="10.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_reinspection_college_laboratories" Width="1.5" PointX="12.75" PointY="395.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_reinspection_college_laboratories_deficiency" Width="1.5" PointX="30.75" PointY="400.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_reinspection_registered_faculty" Width="1.5" PointX="36" PointY="402.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_reinspection_registered_faculty_education" Width="1.5" PointX="38.25" PointY="433.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_scm" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_scm_new" Width="1.5" PointX="24.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_scmproceedingrequest_addfaculty" Width="1.5" PointX="24.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_scmproceedingsrequests" Width="1.5" PointX="24.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_scmupload" Width="1.5" PointX="12.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_shift" Width="1.5" PointX="5.25" PointY="564.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_society_other_colleges" Width="1.5" PointX="15.75" PointY="487.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_society_other_locations_colleges" Width="1.5" PointX="15.75" PointY="492.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_software_norms" Width="1.5" PointX="5.25" PointY="570.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_specialization" Width="1.5" PointX="39" PointY="417.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_sports_type" Width="1.5" PointX="5.25" PointY="574.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_stackholder_type" Width="1.5" PointX="5.25" PointY="578.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_state" Width="1.5" PointX="5.25" PointY="582.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_transport_type" Width="1.5" PointX="5.25" PointY="586.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_ugregistrationnumbers" Width="1.5" PointX="14.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_university" Width="1.5" PointX="5.25" PointY="590.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_updatedfaculty" Width="1.5" PointX="24.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_updatenoscmstatus" Width="1.5" PointX="24.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_water_type" Width="1.5" PointX="5.25" PointY="594.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_year_in_degree" Width="1.5" PointX="5.25" PointY="598" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_applications" Width="1.5" PointX="0.75" PointY="418.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_membership" Width="1.5" PointX="5.25" PointY="602.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_paths" Width="1.5" PointX="24.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_personalizationallusers" Width="1.5" PointX="16.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_personalizationperuser" Width="1.5" PointX="18.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_profiles" Width="1.5" PointX="5.25" PointY="607.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_roles" Width="1.5" PointX="11" PointY="385.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_sessioncleanup" Width="1.5" PointX="3" PointY="300.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_sessions" Width="1.5" PointX="3" PointY="302.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_sitemap" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_users" Width="1.5" PointX="3" PointY="392" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.my_aspnet_usersinroles" Width="1.5" PointX="13.25" PointY="418" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.pan__collegeassociatedjntuh_registered_faculty" Width="1.5" PointX="0.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.pan_appealallcollegespanduplicates" Width="1.5" PointX="26.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.pan_appealrevrificationfaculty" Width="1.5" PointX="24.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.pan_collegeassociatedjntuh_registered_faculty" Width="1.5" PointX="26.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.pan_duplicatepansfaculty" Width="1.5" PointX="2.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.pan_jntuh_registered_faculty" Width="1.5" PointX="4.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.pan_jntuh_registered_faculty1" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.tagsremovedfacultyregnumber" Width="1.5" PointX="14.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_aeronautical" Width="1.5" PointX="16.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_automobile" Width="1.5" PointX="18.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_faculty_analysis_2013_14" Width="1.5" PointX="28.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_faculty_analysis_2014_15" Width="1.5" PointX="28.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_jntuh_registered_faculty" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_jntuh_registered_faculty_education" Width="1.5" PointX="30.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_labdata" Width="1.5" PointX="30.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_labmaster" Width="1.5" PointX="12.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_pan_invalidpand" Width="1.5" PointX="32.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.user_browsers" Width="1.5" PointX="32.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.user_login_logout" Width="1.5" PointX="32.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.verifiedaadharrnumber" Width="1.5" PointX="32.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntu_phd" Width="1.5" PointX="32.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_college_deficiencyandheringdates" Width="1.5" PointX="20.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_noscmold" Width="1.5" PointX="32.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_samepan" Width="1.5" PointX="32.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_settings" Width="1.5" PointX="32.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.pan_appealpan" Width="1.5" PointX="28.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.pan_tptalpansstatus" Width="1.5" PointX="32.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_jntuh_totalcollegesassociatedandfilteredfacultyfaculty" Width="1.5" PointX="14.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_jntuh_totalcollegesassociatedfacultyfaculty" Width="1.5" PointX="16.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_jntuh_totalflagsclearfaculty" Width="1.5" PointX="34.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_notworkingfacultyids" Width="1.5" PointX="34.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_notworkingfacultyidsandregistrationnumbers" Width="1.5" PointX="34.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_notworkingfacultyidsandregistrationnumbers1" Width="1.5" PointX="34.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uaaas117localModel.temp_notworkingfacultyidsandregistrationnumbers2" Width="1.5" PointX="34.75" PointY="16.75" IsExpanded="true" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_circulars_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_circulars_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_circulars_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_clusters_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_clusters_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_clusters_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_grade_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_grade_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_grade_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_grade_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_undertaking_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_undertaking_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_undertaking_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_college_undertaking_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.colleges_groups_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.colleges_groups_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_academic_performance_points_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_academic_performance_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_academic_performance_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_academic_year_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_academic_year_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_academic_performance_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_batch_performance_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_fee_reimbursement_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing_datenrtry2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_proposed_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_overall_faculty_studentratio1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_placement_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_inspection_phase_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_address1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_address_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_address_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_address_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_address_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_affiliation_requests_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_affiliation_requests_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_affiliation_requests_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_affiliation_requests_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_affiliation_requests_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_affiliation_requests_ibfk_6" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_affiliation_type1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_affiliation_type_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_affiliation_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_approach_road_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_approach_road_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_area_requirement1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_area_requirement_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_area_requirement_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_area_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_chairperson_designation1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_chairperson_designation_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_chairperson_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_academic_performance_points_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_committee_observations_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_faculty_deficiency_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_funds_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_infrastructure_parameters_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_laboratories_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_laboratories_dataentry2_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_laboratories_deficiency_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_miscellaneous_parameters_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_pgcourses_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_randamcodes_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_screens_assigned_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_screens_assigned_log_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_staticdata_modifications_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_committee_submission_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_dataentry_allotment_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_ffc_schedule_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_Reinspection_college_laboratories_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_Reinspection_jntuh_college_laboratories_deficiency_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_academic_performance_fk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_affiliation1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_antiragging_committee_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_antiragging_complaints_committee_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_area1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_chairperson1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_closure1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_computer_lab_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_computer_lab_printers_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_computer_student_ratio_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_degree1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_desirable_others_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_desirable_requirement_fk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_document_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_edit_remarks1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_edit_status1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_edit_status_log1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_enclosures1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_enclosures_hardcopy1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_establishment1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_EDEP_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_security_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_staff_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_expenditure_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_registered_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_student_ratio1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_fee_reimbursement_fk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_FFC_overall_faculty_studentRatio1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_grievance_committee_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_grievance_complaints_committee_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_hostel_maintenance_fk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_College_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_College_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_College_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_College_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_College_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_income_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing_datenrtry2_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_proposed_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_internet_bandwidth_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_lab1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_legal_software_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_library1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_library_details1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_name_change1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_news_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_news_old_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_other_university_courses1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_overall_faculty_studentratio_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_payment_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_paymentOfFee_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_placement_fk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_director1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_ratified_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_registered_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_rti_complaints_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_rti_details_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_sports_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_teaching_faculty_position1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_users_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_women_protection_cell_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_women_protection_cell_complaints_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_ffc_cluster_emails_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_experience_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_experience_log_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_society_other_colleges1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_society_other_locations_colleges1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_academic_performance_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_academic_performance_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_academic_performance_fk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_academic_performance_fk_6" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_academic_performance_fk_7" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_academic_performance_points_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_academic_performance_points_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_affiliation_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_affiliation_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_affiliation_type1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_affiliation_type_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_antiragging_committee_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_antiragging_committee_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_antiragging_committee_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_antiragging_complaints_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_antiragging_complaints_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_area_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_area_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_chairperson_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_chairperson_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_closure_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_closure_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_committee_observations_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_committee_observations_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_computer_lab_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_computer_lab_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_computer_lab_printers_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_computer_lab_printers_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_computer_lab_printers_fk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_computer_student_ratio_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_computer_student_ratio_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_computer_student_ratio_fk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_degree_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_degree_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_degree_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_desirable_others_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_desirable_others_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_desirable_requirement_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_desirable_requirement_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_desirable_requirement_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_document_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_document_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_edit_remarks_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_edit_remarks_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_edit_status_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_edit_status_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_edit_status_log_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_edit_status_log_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_enclosures_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_enclosures_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_enclosures_hardcopy_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_enclosures_hardcopy_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_establishment_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_establishment_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_EDEP_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_EDEP_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_EDEP_fk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_security_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_security_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_staff_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_examination_branch_staff_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_expenditure1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_expenditure_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_expenditure_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_expenditure_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_expenditure_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_ibfk_6" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_ibfk_7" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_education_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_subjects_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_faculty_deficiency_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_faculty_deficiency_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_faculty_deficiency_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_faculty_verified_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_registered_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_registered_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_student_ratio_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_student_ratio_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_faculty_student_ratio_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_faculty_verified_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_faculty_verified_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_fee_reimbursement_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_fee_reimbursement_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_fee_reimbursement_fk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_fee_reimbursement_fk_6" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_fee_reimbursement_fk_7" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_FFC_overall_faculty_studentRatio_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_FFC_overall_faculty_studentRatio_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_FFC_overall_faculty_studentRatio_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_FFC_overall_faculty_studentRatio_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_funds_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_funds_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_grievance_committee_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_grievance_committee_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_grievance_committee_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_grievance_complaints_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_grievance_complaints_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_hostel_maintenance_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_hostel_maintenance_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_hostel_maintenance_fk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_income1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_income_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_income_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_income_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_income_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_infrastructure_parameters_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_infrastructure_parameters_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing_datenrtry2_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing_datenrtry2_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing_datenrtry2_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_existing_datenrtry2_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_proposed_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_proposed_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_proposed_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_proposed_ibfk_6" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_intake_proposed_ibfk_7" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_internet_bandwidth_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_internet_bandwidth_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_internet_bandwidth_fk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_lab_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_lab_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_lab_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_lab_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_lab_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_laboratories_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_laboratories_dataentry2_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_laboratories_deficiency_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_laboratories_deficiency_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land_6" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land_7" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land_8" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land_9" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land_registration_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_land_registration_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_legal_software_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_legal_software_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_legal_software_fk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_library_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_library_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_library_details_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_library_details_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_library_details_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_miscellaneous_parameters_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_miscellaneous_parameters_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_name_change_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_name_change_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_news_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_news_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_news_old_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_news_old_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_other_university_courses_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_other_university_courses_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_other_university_courses_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_overall_faculty_studentratio_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_overall_faculty_studentratio_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_overall_faculty_studentratio_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_overall_faculty_studentratio_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_payment_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_payment_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_paymentOfFee1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_paymentOfFee_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_paymentOfFee_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_paymentOfFee_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_paymentOfFee_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_pgcourse_faculty_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_pgcourse_faculty_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_pgcourses_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_pgcourses_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_pgcourses_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_pgcourses_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_pgcourses_6" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_placement_fk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_placement_fk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_placement_fk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_director_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_director_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_director_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_director_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_director_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_ratified_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_ratified_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_registered_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_principal_registered_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_rti_complaints_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_rti_complaints_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_rti_details_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_rti_details_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_rti_details_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_screens_assigned_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_screens_assigned_log_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_sports_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_sports_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_sports_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_staticdata_modifications_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_staticdata_modifications_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_status_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_status_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_teaching_faculty_position_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_teaching_faculty_position_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_teaching_faculty_position_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_teaching_faculty_position_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_terms_accepted_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_terms_accepted_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_users_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_users_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_users_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_college_women_protection_cell_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_women_protection_cell_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_women_protection_cell_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_women_protection_cell_complaints_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_college_women_protection_cell_complaints_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_committee_observations_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_committee_observations_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_committee_submission_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_computer_student_ratio_norms_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_computer_student_ratio_norms_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_course_affiliation_status1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_course_affiliation_status_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_dataentry_allotment_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_dataentry_allotment_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_dataentry_allotment_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jjntuh_lab_experments_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_lab_master_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_degree_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_degree_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_degree_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_department_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_degree_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_degree_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_auditor_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_lab_experments_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_lab_master_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_department_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_department_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_oldfaculty_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_Reinspection_registered_faculty_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_specialization_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_auditor_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_designation_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_designation_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_experience_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_experience_log_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_oldfaculty_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_Reinspection_registered_faculty_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_desirable_requirement_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_desirable_requirement_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_district_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_district_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_district_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_documents_required_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_documents_required_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_download_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_download_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_EDEP_equipment_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_EDEP_equipment_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_education_category_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_education_category_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_education_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_education_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_education_oldfaculty_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_Reinspection_registered_faculty_education_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_enclosures_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_enclosures_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_error_log_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_error_log_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_facility_status_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_facility_status_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_category_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_category_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_education_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_education_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_student_ratio_norms_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_student_ratio_norms_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_subjects_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_subjects_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_subjects_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_subjects_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_faculty_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_feedback_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_ffc_committee_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_ffc_cluster_emails_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_ffc_committee_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_ffc_external_auditor_groups_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_ffc_external_auditor_groups_4" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_ffc_orders_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_GRC_designation1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_GRC_designation_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_infrastructure_parameters_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_infrastructure_parameters_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_inspection_phase_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_inspection_phase_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_internet_bandwidth_norms_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_internet_bandwidth_norms_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_lab_master_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_Reinspection_college_laboratories_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_jntuh_lab_experments_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_land_category_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_land_category_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_land_registration_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_land_registration_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_land_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_land_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_menu_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_menu_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_miscellaneous_parameters_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_miscellaneous_parameters_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_newsevents_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_newsevents_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_other_information_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_other_information_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_payment_mode_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_payment_mode_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_phd_subject_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_phd_subject_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_printers_norms_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_printers_norms_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_program_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_program_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_qualification_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_qualification_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_education_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_education_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_education_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_education_oldfaculty_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_education_oldfaculty_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_education_oldfaculty_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_experience_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_experience_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_experience_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_experience_log_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_experience_log_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_experience_log_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_oldfaculty_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_registered_faculty_oldfaculty_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_Reinspection_jntuh_college_laboratories_deficiency_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.FK_Reinspection_jntuh_college_laboratories_deficiency_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_Reinspection_registered_faculty_education_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_Reinspection_registered_faculty_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_Reinspection_registered_faculty_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_Reinspection_registered_faculty_education_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_Reinspection_registered_faculty_education_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_shift_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_shift_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_society_other_colleges_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_society_other_colleges_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_society_other_colleges_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_society_other_locations_colleges_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_society_other_locations_colleges_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_society_other_locations_colleges_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_software_norms_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_software_norms_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_specialization_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_specialization_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_sports_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_sports_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_stackholder_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_stackholder_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_state_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_state_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_transport_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_transport_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_university_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_university_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_water_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_water_type_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_year_in_degree_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.jntuh_year_in_degree_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.my_aspnet_sessioncleanup1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.my_aspnet_sessions1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.my_aspnet_users1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.my_aspnet_membership1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.my_aspnet_profiles1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.my_aspnet_usersinroles_1" ManuallyRouted="false" />
+        <AssociationConnector Association="uaaas117localModel.my_aspnet_usersinroles1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_auditors_dataentry" Width="1.5" PointX="35.375" PointY="19.75" />
+        <EntityTypeShape EntityType="uaaas117localModel.jntuh_registered_faculty_education_log_copy11042016" Width="1.5" PointX="19.375" PointY="35.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

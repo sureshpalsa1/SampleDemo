@@ -1,0 +1,108 @@
+﻿@{
+    
+    //string CurrentName = Convert.ToString(HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"]);
+   // string CurrentName = User.Identity.Name;
+   // dynamic Layout;
+    //switch (CurrentName)
+    //{
+    //    case "Admin":
+    //        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    //        break;
+    //    default:
+            
+    //        Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+    //        break;
+    //}
+    UAAASSCM.Models.SCMEntities db = new UAAASSCM.Models.SCMEntities();
+
+    string roleName = db.my_aspnet_roles.Join(db.jntuh_registration, R => R.id, U => U.RoleType, (R, U) => new { R = R, U = U }).Where(e => e.U.Email == User.Identity.Name && (e.R.id == 1 || e.R.id == 7 || e.R.id == 8)).Select(e => e.R.name).FirstOrDefault();
+    if (roleName == "Admin")
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else if (roleName=="FacultyVerification")
+    {
+        Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+   
+    ViewBag.Title = "User Creation";
+   
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="error">
+        <p><strong>Error:</strong> @TempData["Error"].ToString()</p>
+    </div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="success">
+        <p><strong>Success:</strong> @TempData["Success"].ToString()</p>
+    </div>
+}
+
+
+<div style="margin-bottom: 170px">
+    <br/>
+    <table border="1" style="width: 100%">
+        <tr>
+            @if (roleName == "Admin")
+            {
+                
+                <td style="width: 33%; background-color: #E6EAEE; padding: 5px;" class="rounded_corners_box">
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("SCM Proceeding Request For Faculty", "SCMRequestsList", "CollegeSCMProceedingsRequest", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("SCM Proceeding Request For Principal", "SCMPrincipalview", "Admin", new {}, new {@target = "_blank"})</span> &nbsp;
+
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Approved Faculty List", "CollegewiseDetails", "Admin", new {}, new {@target = "_blank"})</span> &nbsp;
+ @*<br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Reset Faculty List", "CollegewiseDetailsReset", "Admin", new { }, new { @target = "_blank" })</span> &nbsp;*@
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Approved Principal List", "SCMPrincipalSelectView", "Admin", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("SCM Faculty Uploaded by Colleges", "SCMUploadView", "CollegeSCMProceedingsRequest", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("SCM Principal Uploaded by Colleges", "PrincipalSCMUploadView", "CollegeSCMProceedingsRequest", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("College SCM Request For Professors", "ProfessorsUploadedCollegs", "CollegeSCMProceedingsRequest", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Faculty Verification For Professors", "FacultyVerificationForProfessors", "CollegeSCMProceedingsRequest", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Change Email", "EmailChange", "Home", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Nominee Assigned List", "getAllSCMdeatails", "Admin", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Nominee Re-Assign", "NomineeReassignView", "CollegeSCMProceedingsRequest", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Others Department Saparation", "OthersDeptColleges", "Admin", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Change Password", "ChangePassword", "Admin", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("DataEntry User Creation", "DataEntryCreation", "Admin", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br /><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Approved and Associated Faculty List", "CollegeWiseApprovedReport", "Admin", new { }, new { @target = "_blank" })</span> &nbsp;
+
+                </td>
+
+                <td style="width: 33%; background-color: #E6EAEE; padding: 5px;" class="rounded_corners_box">
+                    <br /><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Adjunct Faculty View", "FindRegistrationNumber", "Home", new { }, new { @target = "_blank" })</span> &nbsp;
+                </td>
+            }
+            else if (roleName == "FacultyVerification")
+            {
+
+                <td style="width: 33%; background-color: #E6EAEE; padding: 5px;" class="rounded_corners_box">
+                    <img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Approved Faculty List", "CollegewiseDetails", "Admin", new {}, new {@target = "_blank"})</span> &nbsp;
+                    <br/> <br/><img src="~/Content/images/hand-point.png"> &nbsp;<span style="font-family: 'Bookman Old Style'; font-size: 16px;">@Html.ActionLink("Change Password", "ChangePassword", "Admin", new {}, new {@target = "_blank"})</span> &nbsp;
+                </td>
+                <td style="width: 33%; background-color: #E6EAEE; padding: 5px;" class="rounded_corners_box"></td>
+            }
+            else
+            {
+
+            }
+
+
+        </tr>
+
+    </table>
+</div>
+    <style>
+        #div1 ul li {
+            padding: 10px;
+            font-size: 15px;
+        }
+    </style>
+

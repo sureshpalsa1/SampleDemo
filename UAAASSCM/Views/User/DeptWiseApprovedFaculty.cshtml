@@ -1,0 +1,136 @@
+﻿@model List<UAAASSCM.Controllers.ScmUploadedData>
+@{
+    ViewBag.Title = "Dept Wise Approved Faculty";
+    if (User.Identity.Name == "admin")
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    }
+    int count = 1;
+}
+<h2>Approved Faculty</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="error">
+        <p><strong>Error:</strong> @TempData["Error"].ToString()</p>
+    </div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="success">
+        <p><strong>Success:</strong> @TempData["Success"].ToString()</p>
+    </div>
+}
+
+<div>
+    <table width="100%">
+        @if (ViewBag.Colleges != null)
+        {
+            <tr>
+                <td class="col1" width="15%" style="font-weight: bold"><span>Colleges</span></td>
+                <td class="col2" width="85%">
+                    @Html.DropDownList("collegeId", new SelectList(ViewBag.Colleges as System.Collections.IEnumerable, "collegeId", "collegeName"), "---Select--", new {@id = "collegeId", style = "max-width: none;width:700px"})
+                </td>
+            </tr>
+        }
+        @*@if (ViewBag.departments != null)
+        {
+            <tr>
+                <td class="col1" width="15%" style="font-weight: bold"><span>Branch/Specialization</span></td>
+                <td class="col2" width="85%">
+                    @Html.DropDownList("SpecializationId", new SelectList(ViewBag.departments as System.Collections.IEnumerable, "SpecializationId", "SpecializationName"), "---Select--", new {@id = "SpecializationId", style = "max-width: none"})
+                </td>
+            </tr>
+        }*@
+
+    </table>
+    <br/>
+    @using (Html.BeginForm("Index", "User", FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
+        <table width="100%" id="tbl1" style="border-collapse: collapse; border: 1px solid #C0C0C0">
+            <tr style="background-color: #C1D4E6">
+                <th>S.No.</th>
+                <th>Registration Number</th>
+                <th>Faculty Name</th>
+                @*<th>Designation</th>*@
+                <th>Nominee Name</th>
+                <th>SCM Uploaded Doc</th>
+                <th>Select</th>
+            </tr>
+            @if (Model != null && Model.Count() != 0)
+            {
+
+                for (int i = 0; i < Model.Count(); i++)
+                {
+                    <tr style="background-color: #FCF1D1">
+                        <td>
+                            @(i + 1)
+                            @Html.HiddenFor(model => model[i].SCMId)
+                            @Html.HiddenFor(model => model[i].SpecializationId)
+                            @Html.HiddenFor(model => model[i].DegreeId)
+                            @Html.HiddenFor(model => model[i].DepartmentId)
+                            @Html.HiddenFor(model => model[i].RegistrationNumber)
+                            @Html.HiddenFor(model => model[i].CollegeId)
+                        </td>
+                        <td>@Html.DisplayFor(model => model[i].RegistrationNumber)</td>
+                        <td>@Html.DisplayFor(model => model[i].FirstName)</td>
+                        <td>@Html.DisplayFor(model => model[i].AuditorName)</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(Model[i].SCMhardcopyview))
+                            {
+                                <b><a href="../Content/Upload/SCMPROCEEDINGSREQUEST/UploadSCMHardCopy/@Model[i].SCMhardcopyview" target="_blank">View</a></b>
+                            }
+                        </td>
+                        <td>
+                            @*@Html.CheckBoxFor(model => model[i].Checked)*@
+                            @if (Model[i].Checked == true)
+                            {
+                                <span>Selected</span>
+                            }
+
+                        </td>
+                        
+                    </tr>
+                }
+            }
+
+        </table>
+    }
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+    });
+
+    $("#collegeId").change(function() {
+        var collegeId = $(this).val();
+        if (collegeId !== "") {
+            window.location = '/User/DeptWiseApprovedFaculty?collegeId=' + collegeId;
+        } else {
+            window.location = '/User/DeptWiseApprovedFaculty';
+        }
+    });
+
+    //$("#SpecializationId").change(function() {
+    //    var specalizationId = $(this).val();
+    //    var collegeId = $("#collegeId").val();
+    //    if (collegeId !== "" && specalizationId !== "") {
+    //        window.location = '/User/DeptWiseApprovedFaculty?collegeId=' + collegeId + '&specializationId=' + specalizationId;
+    //    } else {
+    //        window.location = '/User/DeptWiseApprovedFaculty';
+    //    }
+    //});
+
+
+</script>
+<style>
+    #tbl1 tr th, #tbl1 tr td {
+        border: 1px solid #C0C0C0;
+        padding: 5px;
+    }
+</style>
