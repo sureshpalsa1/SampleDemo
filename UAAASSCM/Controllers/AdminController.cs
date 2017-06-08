@@ -2461,6 +2461,12 @@ namespace UAAASSCM.Controllers
              }
          }
 
+
+        public ActionResult SampleData()
+        {
+            return View();
+        }
+
     }
 
 
