@@ -143,6 +143,7 @@
     <Compile Include="Controllers\AuthorizedUserAccess.cs" />
     <Compile Include="Controllers\CollegeSCMProceedingsRequestController.cs" />
     <Compile Include="Controllers\CollegeSCMProceedingsRequestForAdminController.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\FacultyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ITextEvents.cs" />
@@ -1369,6 +1370,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Demo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
